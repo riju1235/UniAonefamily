@@ -1,0 +1,50 @@
+.headlogo{
+    margin-left: 25px;
+    display: flex;
+    width:210px;
+    height: 50px;
+}
+.logandsign{
+    margin-left: 20px;
+    padding: 25px;
+     
+    /* padding-right: 10px;
+    letter-spacing: 1.5px; */
+}
+/* .first{
+    margin:02px 03px;
+    padding: 0 20px;
+    border: 1px solid #46c4d4;
+    border-radius: 25px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94);   
+} */
+.first :hover {
+    transform: scale(1.05);
+}
+/* .for_providers{
+    font-size: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+} */
+.text-end{
+   
+    padding-right: 50px;
+    letter-spacing: 1.5px;
+}
+.userphoto {
+  margin-left:10px;
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border-width: 5px;
+  border-color: rgb(54, 151, 196);
+  border-style: outset;
+}
+
+.logosider{
+    display: flex;
+    margin-left: 30px;
+}

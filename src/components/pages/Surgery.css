@@ -1,0 +1,90 @@
+.provide{
+    
+    margin-left: 130px;
+width: 1080px;
+
+}
+
+.con2{
+display: flex;
+    margin-left: 10px;
+    width: 62rem;
+    height: 220px;
+}
+
+
+.surgerychoose{
+    margin-left: 100px;
+}
+.belif{
+    display: flex;
+    margin-left: 110px;
+  
+}
+
+@media (max-width: 700px)  {
+    .belif {
+      content: 'Best on wider screens.';
+      display: block;
+      margin: 6em;
+    padding: 1em;
+    font-size: 57%;
+      color: rgb(28, 4, 116);
+    }
+  }
+.bookaa{
+  
+   
+    color: rgb(15, 135, 172);
+   
+}
+
+.column{
+    
+    margin-left: 12px;
+    width: 120px;
+}
+
+.help{
+    margin-left:460px;
+}
+.submitea{
+    display:flex;
+    margin-left: 110px;
+   
+}
+.appio{
+    margin-left: 490px;
+    display:flex;
+    width:420px;
+}
+.form{
+    display: flex;
+    margin-left:1px;
+    width: 350px;
+  gap: 25px;
+  height:40px;
+  margin: 14px;
+  
+  }
+ 
+    .newstyle{
+        display: flex;
+    margin-left:535px;
+    width: 10px;
+    height: 100px;
+   gap: 14px;
+}
+
+    
+
+     .column {
+        flex: 10%;
+        margin-left: 30px;
+        }
+        .column {
+            flex: 10%;
+            margin-left: 30px;
+            }
+
+           

@@ -1,0 +1,95 @@
+/* .findd{
+    width: 110px;
+    min-height: 300px;
+    max-height: auto;
+    float: left;
+    margin: 0px;
+    padding: 0px;
+} */
+.areas5{
+    display: flex;
+    margin-left: 220px;
+    padding:20px;
+    width: 800px;
+    
+    gap: 10px;
+}
+
+
+@media (max-width: 700px)  {
+    .areas5 {
+      content: 'Best on wider screens.';
+      display: block;
+    
+      margin: 1em;
+     
+    }
+  }
+.col8{
+   
+    margin-left: 10px;
+}
+.doctorimages{
+    margin-left: 80px;
+    max-width: 950px;
+    
+}
+.homes{
+    margin-left: 550px;
+    color: rgb(35, 8, 134);
+}
+.insta{
+    margin-left: 100px;
+}
+.tick{
+    display: flex;
+    margin-left: 115px;
+    color:rgb(9, 73, 146);
+}
+.card-title1{
+    color:rgb(26, 116, 189);
+}
+.bcolor {
+    
+    background-color: rgb(26, 116, 189);
+    width:240px;
+    height: 53PX;
+    margin-left: 140px;
+    text-shadow: white;
+    
+    }
+   
+    .medi{
+        margin-left: 215px;
+    }
+    .appdown{
+        display: flex;
+        margin-left: 120px;
+    }
+    .colo{
+        color:rgb(189, 26, 168);
+
+        margin-left: 140px;
+        display: flex;
+    }
+    .downl{
+        display:flex;
+        width: 480px;
+        height: 420px;
+    }
+    .downlowad{
+        display: flex;
+        margin-left: 120px;
+       
+        width: 580px;
+        height: 460px;
+        
+    }
+   .colorss{
+      color: rgb(167, 23, 42);
+   }
+   .fino{
+       display: flex;
+       margin-left: 10px;
+       width: 67rem;
+   }

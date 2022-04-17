@@ -1,0 +1,24 @@
+.article1{
+    margin-left: px;
+}
+
+.top1{
+    display: flex;
+    margin-left: 82px;
+  gap: 01px;
+    width: 78rem;
+    padding:10px
+  
+    
+}
+.column1 {
+    flex: 10%;
+    margin-left: 02px;
+    width: 05rem;
+    
+
+    }
+    .top1  :hover {
+        transform: scale(1.01);
+      
+    }

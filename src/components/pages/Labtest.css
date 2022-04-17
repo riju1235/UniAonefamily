@@ -1,0 +1,262 @@
+.areas{
+    display: flex;
+    margin-left: 55px;
+    padding:25px;
+    width: 800px;
+    gap: 15px;
+  }
+  .diag1{
+    margin-left: 40px;
+   
+  }
+  
+  .test1{
+    display: flex;
+    width: 14rem;
+    
+  }
+
+  .labs{
+    display: flex;
+    margin-left: 4rem;
+    gap: 0rem;
+   
+  }
+
+  @media (max-width: 700px)  {
+    .labs {
+      content: 'Best on wider screens.';
+      display: block;
+      margin: 2em;
+    
+      color: #444;
+    }
+  }
+
+  /* @media (max-width: 520px) {
+  .labs {
+    content: 'Resize your screen to see how it behaves';
+    display: block;
+    font-weight: bold;
+    color: #444;
+    margin: 3em ;
+
+  }
+} */
+
+  .col{
+    width: 13rem;
+    margin-left: 20px;
+
+  }
+  .column{
+      margin-left: 10px;
+  }
+  .diag2{
+    margin-left: 40px;
+  }
+  .test2{
+    display: flex;
+    width: 11rem;
+  }
+  .diagbook{
+    display: flex;
+    width: 101px;
+    margin-left: 40px;
+    gap: 10px;
+  }
+
+  @media (max-width: 700px)  {
+    .diagbook {
+      content: 'Best on wider screens.';
+      display: block;
+      margin: 2em;
+    
+      color: #444;
+    }
+  }
+  .bodyhealth{
+    margin-left: 50px;
+  }
+  .fullbody{
+    width: 22rem;
+  }
+  .fixed1{
+
+
+    width: 110px;
+    min-height: 120px;
+    max-height: auto;
+    float: left;
+    margin: 0px;
+    padding: 0px;
+    }  
+
+  
+    .bodyhealths{
+        display: flex;
+        margin-left: 40px;
+     
+    }
+    .column{
+        margin-left: 35px;
+    }
+    .partnerlab{
+        margin-left: 90px;
+    }
+    .due {
+        margin-left: 536px;
+        
+    }
+    .uniaoneservices{
+        display: flex;
+        margin-left: 36px;
+        gap: 10px;
+    }
+  
+   
+
+    .col{
+        margin-left:25px;
+    }
+    .work{
+      margin-left: 575px;
+    }
+    .icons{
+      display: flex;
+      margin-left: 200px;
+      gap: 150px;
+      width: 68rem;
+    }
+
+/*   
+    .labtestbook{
+      display: flex;
+      margin-left: 60px;
+      gap: 90px;
+      width: 73rem;
+    } */
+ 
+    .column9{
+        margin-left: 30px;
+        width: 320px;
+
+    }
+    .bodytesth{
+      color: rgb(0, 0, 96);
+    }
+
+
+    /* .areas{
+      display: flex;
+      margin-left: 55px;
+      padding:25px;
+      width: 800px;
+      gap: 15px;
+    }
+    .diag1{
+      margin-left: 40px;
+     
+    }
+    
+    .test1{
+      display: flex;
+      width: 14rem;
+      
+    }
+   
+    .labs{
+      display: flex;
+      margin-left:34px;
+      gap: 01px;
+      width: 4rem;
+      width: 120px;
+    }
+   
+  
+    .col{
+      width: 11rem;
+      margin-left: 02px;
+  
+    }
+    .column{
+        margin-left: 10px;
+    }
+    .diag2{
+      margin-left: 40px;
+    }
+    .test2{
+      display: flex;
+      width: 9rem;
+    }
+    .diagbook{
+      display: flex;
+      width: 101px;
+      margin-left: 40px;
+      gap: 01px;
+    }
+    .bodyhealth{
+      margin-left: 50px;
+    }
+    .fullbody{
+      width: 22rem;
+    }
+    .fixed1{
+  
+  
+      width: 110px;
+      min-height: 120px;
+      max-height: auto;
+      float: left;
+      margin: 0px;
+      padding: 0px;
+      }  
+      .bodyhealths{
+          display: flex;
+          margin-left: 57px;
+       
+      }
+      .column{
+          margin-left: 23px;
+      }
+      .partnerlab{
+          margin-left: 80px;
+      }
+      .due {
+          margin-left: 536px;
+          
+      }
+      .uniaoneservices{
+          display: flex;
+          margin-left: 36px;
+          gap: 10px;
+      }
+      .col{
+          margin-left:25px;
+      }
+      .work{
+        margin-left: 565px;
+      }
+      .icons{
+        display: flex;
+        margin-left:163px;
+        gap:145px;
+        width: 69rem;
+      }
+      .labtestbook{
+        display: flex;
+        margin-left: 63px;
+        gap: 100px;
+        width: 72rem;
+      } */
+
+      /* display: flex;
+  margin-left: 60px;
+  
+  width: 75rem; */
+
+
+   /* display: flex;
+    margin-left: 60px;
+    
+    width: 75rem; */

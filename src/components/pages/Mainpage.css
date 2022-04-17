@@ -1,0 +1,47 @@
+
+
+  .heade > shadow {
+      border-radius: 25px;
+  }
+  .column {
+    /* flex: 10%; */
+    
+    margin-left: 01px;
+    }
+    .consult{
+        margin-left: 80px;
+      }
+      .head2{
+        display: flex;
+        width: 80rem;
+       gap: 01px;
+        margin-left: 55px;
+        padding: 15px;
+
+      }
+      .clinic{
+        margin-left: 70px;
+        
+      }
+
+      
+      .customer{
+        margin-left:523px;
+      }
+      .headi{
+        border-radius: 55px;
+      }
+      .column3{
+        margin-left: 01px;
+        width: 15rem;
+      }
+    
+    .buttomst{
+      margin-left: 550px;
+    }
+    .india{
+      color: rgb(0, 0, 114);
+    }
+
+   
+  

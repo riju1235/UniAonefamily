@@ -1,0 +1,51 @@
+
+    .helps{
+     
+        margin-left: 70px;
+      
+        color:rgb(104, 5, 54);
+    }
+    
+        
+    .scans{
+       
+        color: rgb(0, 1, 75);
+    }
+  
+
+    
+
+    .cotan{
+        display: flex;
+        margin-left: 220px;
+        width: 220px;
+        gap: 50px;
+    }
+    .contacts{
+    display: flex;
+        margin-left:130px;
+        width: 800px;
+        height: 100px;
+       gap: 150px;
+    }
+    .column{
+        margin-left: 25px;
+    }
+    .xsize{
+       
+        display: flex;
+      width: 92px;
+        width: 850px;
+       height: 30px;
+    
+    }
+    /* .container{
+        display: flex;
+        margin-left: 45px;
+        width: 105rem;
+
+    } */
+   .xrays{
+    display: flex;
+    margin-left: 120x;
+   }

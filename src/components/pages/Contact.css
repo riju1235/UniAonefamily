@@ -1,0 +1,41 @@
+
+   .logocreate{
+    display: flex;
+    margin-left: 30px;
+   
+   }
+   .supportno1{
+       color: rgb(108, 112, 139);
+   }
+   .logoconta{
+       margin-left: 500px;
+   }
+   
+@media (max-width: 700px)  {
+    .logoconta {
+      content: 'Best on wider screens.';
+      display: block;
+      margin: 4em;
+    
+     
+    }
+  }
+
+  .sizesc{
+    display: flex;
+    gap: 60px;
+    margin-left: 75px;
+   width: 1190px;
+   
+
+  }
+
+  @media (max-width: 700px)  {
+    .sizesc {
+      content: 'Best on wider screens.';
+      display: block;
+      margin: 5em;
+      padding: 1em;
+
+    }
+  }

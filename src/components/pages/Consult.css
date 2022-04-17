@@ -1,0 +1,50 @@
+.cons{
+    margin-left: 75px;
+  }
+  .roundc{
+    display: flex;
+    width: 76rem;
+    padding: 10px;
+    margin-left: 40px;
+    
+  }
+
+  .rounded-circle{
+   display: flex;
+   width: 10rem;
+  }
+  .common{
+   
+    margin-left: 75px;
+  }
+ 
+
+  .column{
+    display: flex;
+    margin-left: 10px;
+  }
+  .steps{
+       display: flex;
+        margin-left: 130px;
+        gap: 90px;
+    /* display: flex;
+    gap: 100px;
+    margin-left: 140px;
+   
+    gap: 160px; */
+  }
+
+
+  .feedback{
+    display: flex;
+    margin-left: 120px;
+  gap: 15px;
+  }
+  .col{
+    margin-left: 05px;
+}
+/* .div{
+  display: flex;
+  justify-content: center;
+} */
+
