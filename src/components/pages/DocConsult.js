@@ -163,23 +163,39 @@ function DocConsult() {
             <div className='DocConsultant' style={{ display: "block",margin:50 }}>
                 <Image style={{ display: "block", width: 350, height: 250 }} src={doctor && doctor.docImg} rounded/>
                 <h2>{doctor && doctor.fName} {doctor && doctor.lName}</h2>
-                <h4>{doctor && doctor.specialization}</h4>  
-                <h5>{doctor && doctor.experiance} years of experience</h5>        
+                <h6>{doctor && doctor.specialization}</h6>  
+                <h6>{doctor && doctor.experiance} years of experience</h6>    
+                <div class="btn-group">
+                                <div class="dropdown">
+  <button class="btn btn-sm btn-info dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+    Time Slot
+  </button>
+
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+    <li><button class="dropdown-item" ><center>Today {doctor && doctor.slots}</center></button></li>
+    <li><button class="dropdown-item btn btn-primary"> <center> {doctor && doctor.todaytime}</center></button></li>
+    <li><button class="dropdown-item"><center>Tomorrow {doctor && doctor.tomorrowslot}</center></button></li>
+    <li><button class="dropdown-item"><center>{doctor && doctor.tomorrowtime}</center></button></li>
+  </ul>
+</div>
+<div class="dropdown">
+  <a class="btn btn-sm btn-o dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+    Clinic
+  </a>
+
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+    <li><p class="dropdown-item">{doctor && doctor.ClinicName}</p></li>
+    <li><button class="dropdown-item">{doctor && doctor.ClinicLocation}</button></li>
+    <li> <a class="dropdown-item btn btn-btn-outline-info" href="tel: {doctor.ClinicCall}"> {doctor && doctor.ClinicCall}</a></li>
+  </ul>
+</div>
+</div>    
             </div>
             {emailVerified ? (
-            <form onSubmit={bookappointment} className='consult' style={{ display: "block",margin:50 }}>
+            <form onSubmit={bookappointment} className='consult' style={{ display: "block", margin:50 }}>
+              
                 <h2>Book An Appointment</h2>
-                 {/* <form>
-                    <label style={{margin:5}}>
-                        Name:
-                        <input type="text" name="name" />
-                    </label>
-                    <br></br>
-                    <label style={{margin:5}}>
-                        Email:
-                        <input type="email" name="email" />
-                    </label>
-                </form> */}
+              
                  <div class="col-md-8">
     <label for="validationCustom03" class="form-label"></label>
     <input type="text" class="form-control" placeholder="Patient Name *" 

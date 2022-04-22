@@ -28,7 +28,7 @@ function Career (props) {
 
         <>
         <Navbar/>
-        <br/><br/><br/>
+  
           <img  src={Career1} class="img-fluid"  width="1349" height="600" alt="Health1"></img>
           <br/><br/><br/>
           <div className="careercolornwe">
@@ -42,7 +42,7 @@ Want to join our <br/>  mission to keep the health and well-being of all patient
 <nav>
   <div class="nav nav-tabs" id="nav-tab" role="tablist">
     <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">JOB FOR YOU</button>
-    <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">JOIN OUR TALENT NETWORK</button>
+    <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">JOIN OUR MISSION</button>
     <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">CONTACT</button>
   </div>
 </nav>
@@ -98,7 +98,7 @@ Want to join our <br/>  mission to keep the health and well-being of all patient
                       
                             <h5 className="card-text">OUR OFFICIAL EMAIL ID </h5>
                             <h6 className="card-text">Send us your C.V </h6>
-                            <p className="card-text"> carrer@uniaonefamily.com</p>
+                            <p className="card-text"> care@uniaonefamily.com</p>
                             <div className="d-flex justify-content-between align-items-center">
                                
                                 

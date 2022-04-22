@@ -151,19 +151,19 @@ function NavBar (props) {
 
   return (
     
-  <div className="mains">
- <div class="fixed-top shadow">
-<Navbar bg="light" expand="lg">
+<>
+
+<Navbar bg="light shadow "  expand="lg">
   <Container fluid>
-  <div className="logosider">
+  {/* <div className="logosider"> */}
     <Navbar.Brand>
     <Link to="/">
-    <img src={Logo} className="img-fluid" alt="Logos"/></Link></Navbar.Brand></div>
+    <img src={Logo} className="img-fluid"  width="190" height="60" alt="Logos"/></Link></Navbar.Brand>
     <Navbar.Toggle aria-controls="navbarScroll" />
     <Navbar.Collapse id="navbarScroll">
       <Nav
         className="me-auto my-2 my-lg-0"
-        style={{ maxHeight: '250px' }}
+        style={{ maxHeight: '350px' }}
         navbarScroll
       >
         
@@ -172,12 +172,13 @@ function NavBar (props) {
         <Nav.Link> <Link to="/Labtest"><b>Lab Test</b><br></br><small>Book Test & checkup</small></Link></Nav.Link>
         <Nav.Link><Link to="/xray"><b>Scan & Xray</b><br/><small>Book scan & xray</small></Link></Nav.Link>
         <Nav.Link><Link to="/clinic"><b>Clinic</b><br/><small>India's Varified Clinic</small></Link></Nav.Link>
+        <Nav.Link><Link to="/hospital"><b>Hospital</b><br/><small>Search Best Hospital</small></Link></Nav.Link>
         <NavDropdown title="For Providers" id="navbarScrollingDropdown">
           <NavDropdown.Item><Link to="/corporate">Corporate Wellness</Link></NavDropdown.Item> <br/>
           <NavDropdown.Item><Link to="/surgery">Book Top Quality Surgeries</Link></NavDropdown.Item> <br/>
           <NavDropdown.Item><Link to="/hospital">Search for hospitals</Link></NavDropdown.Item> <br/>
-          <NavDropdown.Item><Link to="/registerdoc">Manage doctor profile</Link></NavDropdown.Item> <br/>
-          <NavDropdown.Item href="#action4">Social Work</NavDropdown.Item>
+          <NavDropdown.Item><Link to="/Registerdoctor">Manage doctor profile</Link></NavDropdown.Item> <br/>
+          <NavDropdown.Item><Link to="/socialwork">Social Work</Link></NavDropdown.Item>
           <NavDropdown.Divider />
           <NavDropdown.Item href="#action5">
           Software for provider
@@ -185,7 +186,7 @@ function NavBar (props) {
         </NavDropdown>
         
       </Nav>
-      <div className="text-end d-grid gap-2 d-md-flex justify-content-md-end"> 
+      <div className="text-end d-grid gap-3 d-md-flex justify-content-md-end"> 
 
           {!user ? (
 
@@ -208,13 +209,16 @@ function NavBar (props) {
                 <Dropdown.Menu>
                   <center>
                   <Dropdown.Item>
-                    <Button onClick={() => {navigate(`/UserDashboard/${user.uid}`)}} variant='info btn-sm'>Dashboard</Button>
+                    <Button onClick={() => {navigate(`/UserDashboard/${user.uid}`)}} variant='info btn-sm'><small>Dashboard</small></Button>
                   </Dropdown.Item>
                   <Dropdown.Item>
-                    <Button onClick={() => {navigate(`/UserDashboard/${user.uid}`)}} variant='primary btn-sm'>Appointment</Button>
+                    <Button onClick={() => {navigate(`/UserDashboard/${user.uid}`)}} variant='primary btn-sm'><small>Appointment</small></Button>
                   </Dropdown.Item>
                   <Dropdown.Item>
-                    <Button variant='danger btn-sm' onClick={handleLogOut}>LOG OUT</Button>
+                    <Button onClick={() => {navigate(`/UserDashboard/${user.uid}`)}} variant='primary btn-sm'><small>Health Record</small></Button>
+                  </Dropdown.Item>
+                  <Dropdown.Item>
+                    <Button variant='danger btn-sm' onClick={handleLogOut}><small>LOG OUT</small></Button>
                   </Dropdown.Item>
                   </center>
                 </Dropdown.Menu>
@@ -228,7 +232,7 @@ function NavBar (props) {
     </Navbar.Collapse>
   </Container>
 </Navbar>
-</div>
+
     
     {/* <nav className="navbar navbar-expand-lg navbar-light bg-light">
       
@@ -332,7 +336,8 @@ function NavBar (props) {
   
  
 
-   </div>
+  </>
+
   
  
   );

@@ -7,12 +7,10 @@ function Privacy (props) {
 
         <>
         <Navbar/>
-        <br/><br/>
+   
 
-<br/><br/>
-
-
-
+<div className="album py-5">
+        
         <div className="container">
 
         <div className="row">
@@ -37,7 +35,7 @@ function Privacy (props) {
 <p className="card-text"><b>GRIEVANCE OFFICER</b></p>      
 <p className="card-text">In case of any complaints or grievances, the User may contact the Grievance Officer as under:</p>                        
 <p className="card-text">Head Customer Care<br/>
-Email ID: grievance@uniaonefamily.com</p>    
+Email ID: care@uniaonefamily.com</p>    
 
 </div></div>
 </div>
@@ -47,7 +45,7 @@ Email ID: grievance@uniaonefamily.com</p>
 
 
 
-
+</div>
                             
         </>
 

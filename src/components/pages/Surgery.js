@@ -2,18 +2,7 @@ import React from 'react';
 import AddBook from '../AddBook';
 import Navbar from '../inc/Navbar';
 import Surgerycare from '../images/surgery.jpg';
-import Piles from '../images/piles.jpg';
-import Hernia from '../images/harnia.jpg';
-import Apendictis from '../images/apendictics.jpg';
-import Annalf from '../images/annalfis2.jpg';
-import Venies from '../images/veins.jpg';
-import VSDSURGRY from '../images/VSD Surgery.jpg';
 
-import Hystercetomy from '../images/Hysterectomy.jpg';
-import Kidney from '../images/kidney3.jpg';
-import Pacemekar from '../images/HEART.jpg';
-import Coronary from '../images/Coronary Angioplasty.jpg';
-import Sinus from '../images/sinus.jpg';
 
 import './Surgery.css'
 
@@ -26,19 +15,14 @@ const Surgery = (props) => {
         <div className="huamn">
 
       <Navbar/>
-       
-
-          <br/>
-<br/>
 
 
          <img src={ Surgerycare} class="img-fluid" width="1349" height="600"  alt=" Surgerycare"></img>
          <br/><br/>
-         <br></br>
    
 
 
-<div className="album py-5">
+<div className="album py-2">
         
         <div className="container">
 
@@ -252,46 +236,79 @@ const Surgery = (props) => {
                 </div>
                 </div>
                 </div>
+                <br/>
 
-
-        <br/><br/>
-        <div className="surgerychoose">
-             <h3>{props.whysur}</h3>
+             <h3 style={{textAlign: "center"}}>{props.whysur}</h3>
          
-        
-        </div>
+      
         <br/>
         <div class="p-3 mb-2 bg-light text-black">
+        <div className="album py-3">
+        
+        <div className="container">
 
-        <div className="belif">
-          <div className="column">
-        <h6>{props.surg1}<br/>{props.surg1br}</h6>
+            <div className="row">
+            <div className="col-md-4 ">
+                  
+                    <div className="card-body">
+                    <h5 className="card-text"><center>Access to 300+ surgeons from the
+best hospitals</center></h5>
+                            <p className="card-text"> <center>Reliable and safe process</center></p>
+                            <div className="d-flex justify-content-between align-items-center">
+                               
+                           
+
+                        </div>
+                      
+                    
+                    </div>
+
+                  
+                </div>
+                <div className="col-md-4 ">
+                  
+                    <div className="card-body">
+                    <h5 className="card-text"><center>Expert Surgeons with 10+ years of
+experience</center></h5>
+                            <p className="card-text"><center>India's top hispital</center></p>
+                            <div className="d-flex justify-content-between align-items-center">
+                               
+
+                        </div>
+                      
+                    
+                    </div>
+
+                  
+                </div>
+                <div className="col-md-4 ">
+                  
+                    <div className="card-body">
+                    <h5 className="card-text"><center>Instant appointment with top doctors
+across India</center></h5>
+                            <p className="card-text"> <center>600+ surgeries done every month by
+Uniaonefamily network hospitals</center></p>
+                            <div className="d-flex justify-content-between align-items-center">
+                               
+                           
+
+                        </div>
+                      
+                    
+                    </div>
+
+                  
+                </div>
+                <div>
+                  </div>
+                  </div>
         </div>
-        <div className="column">
-        <h6>{props.surg2}<br/> {props.surg2br}</h6>
         </div>
-        <div className="column">
-        <h6>{props.surg3}<br/> {props.surg3br}</h6>
-        </div>
-       
-        </div>
-        <br></br>
-        <div className="belif">
-          <div className="column">
-        <h6>{props.surg4}</h6>
-        </div>
-        <div className="column">
-        <h6>{props.surg5}</h6>
-        </div>
-        <div className="column">
-        <h6>{props.surg6}<br/>{props.surg6br}</h6>
-        </div>
-       
-        </div>
+      
         
         </div>
-        <br></br><br></br>
-        <div class="p-3 mb-2 bg-light text-black">
+        <br></br>
+        <div class="p-4 mb-2 bg-light text-dark">
           <br/>
     
         <h4 style={{textAlign:"center"}}>{props.helpbooks}</h4>
@@ -305,7 +322,7 @@ const Surgery = (props) => {
          
           <h3  style={{textAlign:"center"}} >{props.phone}</h3>
        
-          
+          <br/>
      
            </div>
         

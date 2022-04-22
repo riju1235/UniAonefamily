@@ -8,19 +8,7 @@ function Xray (props) {
     return (
         <div className="cotnm">
             
-          <Navbar/>
-          <div className="fixed-bottom " style={{textAlign: "center"}}>
-          <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
-  <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off"/>
-  <label class="btn btn-primary" for="btncheck1">Help line number</label>
-
-  <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off"/>
-  <label class="btn btn-outline-primary" for="btncheck2">9933798896</label>
-
-</div>
-</div>
-            <br/><br/><br/>
-      
+          <Navbar/>     
 
 <img src={Scans} class="img-fluid"  width="1349" height="600" alt="Scans"></img>
 
@@ -29,6 +17,7 @@ function Xray (props) {
 <br/>
 <br/>
 
+<a href="tel: +91 9933798896"  className="btn btn- btn-outline-info">Call Now</a>
 
 
 
@@ -37,14 +26,13 @@ function Xray (props) {
 
 
 
-
-<br/><br></br><br/><br/>
+<br/><br></br><br/>
 <div className="scans">
 <h4 style={{textAlign: "center"}}>{props.scantest}</h4>
 </div>
 <br></br>
 
-    <div className="album py-5">
+    <div className="album py-3">
         
             <div className="container">
 
@@ -188,8 +176,6 @@ function Xray (props) {
                     </div>
                     </div>
                     </div>
-                 
-  ...
 
 {/*    
 <div class="card shadow text-center">
@@ -201,7 +187,6 @@ function Xray (props) {
   </div> */}
   
 
-<br></br><br></br>
 <br></br>
    
     </div>

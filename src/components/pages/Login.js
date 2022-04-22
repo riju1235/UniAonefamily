@@ -7,6 +7,7 @@ import GoogleButton from 'react-google-button';
 import { useUserAuth } from '../../contexts/UserAuthContext';
 import { collection, getDocs, getDoc, addDoc } from "firebase/firestore";
 import { db } from '../../firebase'
+import Signup from './Signup';
 
 function Login(props) {
   const [email, setEmail] = useState("")
@@ -59,58 +60,68 @@ function Login(props) {
     return (
       <>    
           <Navbar/>
+         
     <form onSubmit={handleSubmit} className="loog">
-                    
-    <hr/>
-    <br/><br/><br/>
-    <div className="mainl">
-      <div className="column">
-        
-    <h4>{props.log}</h4>
     
-    </div>
-    <div className="column">
-      <Link to="/Signup">
-    <h4>{props.sup}</h4>
-    </Link>
-    </div>
-    </div>
-    <div className="missionl">
+ 
+    <br/>
+   
+
+                  
     
-    <div className="card border-primary mb-3 card text-center shadow">
-    {error && <Alert variant='danger'><center>{error}</center></Alert>}
-  <div className="card-header"> {props.unaionefam}</div>
-  
-  <div class="card-body text-primary">
-    <h5 class="card-title">{props.nabl}</h5>
-    <div classname="contsi">
+    <div className="album py-3">
         
-        <div className="form">
+        <div className="container">
+ 
+        
+            <div className="row justify-content-center">
        
-    <input onChange={(e) => setEmail(e.target.value)} type="text" class="form-control" placeholder="Email ID" required/>
-  </div>
-    <div class="form">
-    <input onChange={(e) => setPassword(e.target.value)}type="text" class="form-control" placeholder="Password" required/>
+            <div className="col-md-5">
+            <div className="d-flex justify-content-between">
+             <button className="btn btn-outline-primary">Login</button>
+             <Link to="/Signup">
+             <button className="btn btn-outline-primary">Signup</button>
+             </Link>
+         </div>
+         <br/>
+            <div className="card mb-4 border-primary box shadow">
+           
+            <div className="card-body">
+   
+    {error && <Alert variant='danger'><center>{error}</center></Alert>}
+  <div className="card-header mb-2"> <center>{props.unaionefam}</center></div>
+
+    <h5 className="card-text"><center>Certified doctors, NABL accredited labs and more
+</center></h5>
+    
+      
+       
+    <input onChange={(e) => setEmail(e.target.value)} type="text" className="form-control mb-3" placeholder="Email ID" required/>
+    
+ 
+    
+    <input onChange={(e) => setPassword(e.target.value)}type="text" className="form-control mb-3" placeholder="Password" required/>
   
-</div>
-<div className="colors">
 
-<p>{props.forgate}</p>
-</div>
-<p className="small">{props.socialterm} </p>
 
-    <div className="submite2">
+<p className="card-text"> <center><small>{props.socialterm}</small></center> </p>
+
+<div class="col-md-12 text-center">
       <button type="submit" class="btn btn-primary" style={{width:'150px'}}>{props.loginf} </button>
-    </div>
-    <div className="submite3">
-      <GoogleButton onClick = { handleGoogleSignIn } className='g-btn' type='dark'></GoogleButton>
-    </div>
-    
-    </div>
-    
-  </div>
+      </div>
+      {/* <div class="col-md-12 text-center"> */}
+      <div className="submited7">
+      <GoogleButton onClick = { handleGoogleSignIn }  className='g-btn' type='dark'></GoogleButton>
+      {/* </div> */}
+      </div>
 </div>
 </div>
+</div>
+</div>
+</div>
+</div>
+
+
 <br/>
 <br/>
 </form>

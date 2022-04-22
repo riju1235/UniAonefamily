@@ -1,6 +1,5 @@
 import React, {useReducer, useState, useEffect} from 'react';
 import {Link} from 'react-router-dom';
-import Navbar from '../inc/Navbar';
 import PaginationOld from './PaginationOld';
 import { collection, getDocs, } from "firebase/firestore";
 import {db} from '../../firebase'
@@ -38,8 +37,7 @@ function Checkup (props) {
     return (
 
        <>
-<Navbar/>
-<br/><br/><br/><br/>
+<br/>
 <div className="bodytesth">   
         <h3 style={{textAlign: "center"}}>#We want all the employees of all the corporate companies in India to be healthy,<br/> the corporate companies will boost the economy of the country.</h3>               
         </div>

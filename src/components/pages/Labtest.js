@@ -390,10 +390,7 @@ import Checkup from '../pages/Checkup';
 import './Labtest.css';
 import {Link} from 'react-router-dom';
 import Labtest from '../images/LABHEAD1.jpg';
-import Fever from '../images/fevers.jpg';
-import Cancer from '../images/cancer.jpg';
-import Kidney from '../images/kidney.jpg';
-import Bone from '../images/bone.jpg';
+
 
 
 import Surakha from '../images/SURAKHA.jpg';
@@ -453,15 +450,14 @@ useEffect(() => {
   // });
 
 return (
-<div className="diagno">
+<div >
   <Navbar/>
-  <br/><br/><br/>
   
-  <img src={Labtest} class="img-fluid" alt="..."></img>
+  <img src={Labtest}  class="img-fluid"   width="1349" height="500" alt="..."></img>
   {/* <img src={Labtest} width="1349" height="500"  alt="LabTest"/> */}
   <br></br>
   <br></br>
-  <div className="album py-3">
+  <div className="album py-2">
         
             <div className="container">
 
@@ -491,13 +487,22 @@ return (
                     </div>
                     </div>
                     </div>
-  
-  <div className="diag1">
-    <h4>{props.mainl}</h4>
-  </div>
-  <br></br>
-  {/* <div className="labs"> */}
-  <div className="album py-4">
+                    <div className="album py-1">
+        
+        <div className="container">
+
+            <div className="row">
+            <div className="col-md-9 ">
+              
+                    <div className="card-body">
+                            <h3 className="card-text mb-4">Top Booked Diagnostic Tests</h3>
+                    
+                    </div>
+                </div>
+                </div>
+                </div>
+                </div>
+  <div className="album py-3">
         
         <div className="container">
 
@@ -627,14 +632,38 @@ return (
 <hr/>
 
 <br></br>
-<div className="partnerlab">
-<h5 className="text-blue">{props.partnerlab}</h5>
-<p>{props.partnerl1} <br>
-</br>{props.partnerl2br}</p>
+<div className="album py-1">
+        
+        <div className="container">
 
-<img src={Surakha}  alt="Surakha"/>
-</div>
-<br></br>
+            <div className="row">
+            <div className="col-md-6 ">
+              
+                    <div className="card-body">
+                            <h5 className="card-text mb-3">Our Partner Labs</h5>
+                            <p className="card-text">Your tests will be conducted in one of our partner labs
+to ensure highest accurachy of your reports.</p>
+                    </div>
+
+                  
+                </div>
+                </div>
+                </div>
+                </div>
+
+                <div className="album py-1">
+        
+        <div className="container">
+
+            <div className="row">
+            <div className="col-md-6">
+            <div className="mb-2">
+            <img src={Surakha}  class="img-fluid"  alt="Surakha"/>
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
 <br></br>
 <hr/>
 <br></br>
@@ -643,23 +672,67 @@ return (
 
 <br></br>
 <br></br>
-<div className="uniaoneservices">
-  <div className="col">
-<h5>{props.sample}</h5>
-<p>{props.whyl1}<br></br>{props.whyl1br}</p>
-</div>
-<div className="col">
-<h5>{props.sample2}</h5>
-<p>{props.whyl2}</p>
-</div>
-<div className="col">
-<h5>{props.sample3}</h5>
-<p>{props.whyl3}</p>
-</div>
-</div>
-<br></br>
-<br></br>
-<br/>
+
+
+<div className="album py-3">
+        
+        <div className="container">
+
+            <div className="row">
+            <div className="col-md-4 ">
+                  
+                    <div className="card-body">
+                    <h5 className="card-text"><center>Home sample collection for free</center></h5>
+                            <p className="card-text"> <center>A certified professional will collect your sample
+from your preferred location</center></p>
+                            <div className="d-flex justify-content-between align-items-center">
+                               
+                           
+
+                        </div>
+                      
+                    
+                    </div>
+
+                  
+                </div>
+                <div className="col-md-4 ">
+                  
+                    <div className="card-body">
+                    <h5 className="card-text"><center>Get digital report within a day</center></h5>
+                            <p className="card-text"><center>Our labs ensure turn-around-time of 24 hours from specimen pickup</center></p>
+                            <div className="d-flex justify-content-between align-items-center">
+                               
+
+                        </div>
+                      
+                    
+                    </div>
+
+                  
+                </div>
+                <div className="col-md-4 ">
+                  
+                    <div className="card-body">
+                    <h5 className="card-text"><center>Offers and affordable prices</center></h5>
+                            <p className="card-text"> <center>Get great discounts and offers on tests and packages</center></p>
+                            <div className="d-flex justify-content-between align-items-center">
+                               
+                           
+
+                        </div>
+                      
+                    
+                    </div>
+
+                  
+                </div>
+                <div>
+                  </div>
+                  </div>
+        </div>
+        </div>
+
 <br/>
 <div class="p-3 mb-2 bg-light text-black"><br/>
 

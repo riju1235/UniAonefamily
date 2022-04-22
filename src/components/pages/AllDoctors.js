@@ -38,7 +38,7 @@ function AllDoctors (props) {
   return (
     <div>     
           <Navbar/>
-             <br/><br/><br/>
+             
              <img src={FindDoctor}  class="img-fluid" width="1350" height="500" alt="..."></img>
              <br/>
              
@@ -52,7 +52,7 @@ function AllDoctors (props) {
                 <div className="col-md-6">
                         
                         <div className="card-body">
-                        <input type="text" class="form-control" placeholder="Dr. Name, Speciality, location, year of experiance" name="location" 
+                        <input type="text" class="form-control" placeholder="Dr. Name, Speciality, year of experiance" name="location" 
                         onChange ={(e) => {
                           setsearchTerm(e.target.value);
                         }}

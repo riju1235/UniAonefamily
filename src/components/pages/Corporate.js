@@ -4,78 +4,77 @@ import AddCorporate from '../AddCorporate';
 import {Link} from 'react-router-dom';
 import Corporate1 from '../images/Corporateimage.jpg';
 import Corporate2 from '../images/rating4.5.png';
+import Corporathealth from '../images/corportatee.jpg';
 import './Corporate.css';
 
 function Corporate(props) {
     return(
         
-        <>          <Navbar/>
-                  <br/>
-
-<br/>
- <div className="fixed1">
-           <img src={Corporate1}  width="1349" height="700" alt="Corporate"/>
-          
-           </div>
-
-
-{/* <div className="forms">
-
-<div className="form">
-
-    <input type="text" class="form-control" placeholder="Enter Your Name" aria-label="Enter Your Name"/>
-  </div>
-    <div class="form">
-    <input type="text" class="form-control" placeholder="Organization Name" aria-label="Organization"/>
-  
-</div>
-<div class="form">
-    <input type="text" class="form-control" placeholder="Email Id" aria-label="Email Id"/>
-  
-</div>
-<div class="form">
-    <input type="text" class="form-control" placeholder="Contact Number" aria-label="Contact Number"/>
-  
-</div>
-<div class="form">
-
-    <select id="inputState" class="form-select">
-      <option selected>{props.emplsiz}</option>
-      <option>{props.emplsiz2}</option>
-      <option>{props.emplsiz3}</option>
-      <option>{props.emplsiz4}</option>
-      <option>{props.emplsiz5}</option>
-      <option>{props.emplsiz6}</option>
-      <option>{props.emplsiz7}</option>
-      <option>{props.emplsiz8}</option>
-      <option>{props.emplsiz9}</option>
-      <option>{props.emplsiz10}</option>
-    </select>
-    </div>
-    <div className="submited">
-    <button type="button" style={{width:'355px'}} class="btn btn-primary">{props.sub} </button>
-    </div>
+        <>      
+      <Navbar/>
    
+           <img src={Corporate1}  class="img-fluid"  width="1349" height="700" alt="Corporate"/>
+           <AddCorporate/>
 
+           <div className="album py-5">
+        
+        <div className="container">
+        
+            <div className="row">
+           
+            <div className="col-md-6">
 
-<br></br>
+                    <div className="card-body">
+                   
+                    <img src= {Corporathealth} className="card-img-top" alt="Corporathealth" />
+                            <div className="d-flex justify-content-between align-items-center">
+                               </div>
+                           
+                            </div>
+                        </div> 
+                    
+                  
+                <div className="col-md-6">          
+             <div className="card-body">
+                    <h4 className="card-text">The corporate companies will boost the economy of the country.</h4>
+                            <p className="card-text"> <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16">
+  <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
+</svg> Health of corporate employees </p>
+<p className="card-text">  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16">
+  <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
+</svg> <small>Comprehensive health checkup</small></p>
+<p className="card-text">  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16">
+  <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
+</svg> All your medical records
+In one secure web. </p>
+<p className="card-text">  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16">
+  <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
+</svg> Records are accessible only by you </p>
+<p className="card-text">  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16">
+  <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
+</svg> Access your records across 3500+ centers </p>
+<p className="card-text">  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16">
+  <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
+</svg> 24X7 Support </p>
+<div class="col-md-6 text-center">
+                              <Link to="/labtest">
+                            <button type="button" class="btn btn-outline-primary"> Full-Body Helath Checkups</button></Link> <br/><br/>
+                                </div>
 
-    </div> */}
-    
-    <br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
+                            <div className="d-flex justify-content-between align-items-center">
+                             
+                          
+                          </div>    
+                      
+                    </div>
+                    </div>
 
-   
-    <AddCorporate/>
-    <br/><br/>
+                </div>
+                </div>
+                </div>
+ 
     <div className="corporateee">
-    <h1 style={{textAlign: "center"}} className=" text-black"><b>{props.heading1}</b></h1>
+    <h1 style={{textAlign: "center"}} ><b>{props.heading1}</b></h1>
     </div>
 <div className="privatec">
 

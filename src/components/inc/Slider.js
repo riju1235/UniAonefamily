@@ -1,7 +1,7 @@
 import React from 'react';
 import './Slider.css';
-import Headimage1 from '../images/headimage3.0.jpg';
-import Headimage2 from '../images/headimages.jpg';
+import Headimage1 from '../images/headimages3.jpg';
+import Headimage2 from '../images/headimagessss.jpg';
 import Doctor3 from '../images/doctor.jpg';
 import {Link} from 'react-router-dom';
 
@@ -9,7 +9,7 @@ import {Link} from 'react-router-dom';
 function Slider (props) {
     return (
         <div>
-            <br/><br/><br/>
+           
             <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>

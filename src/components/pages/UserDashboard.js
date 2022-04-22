@@ -84,9 +84,8 @@
 
 import React, {useEffect, useState, } from 'react'
 import AddLabbook from '../AddLabbook';
-import Phonesign from '../pages/Phonesign';
 // import Medical from '../pages/Medical';
-import Record from '../pages/Record';
+
 import Navbar from '../inc/Navbar';
 import { Badge, Dropdown, Container, Nav, Form, FormControl, NavDropdown} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
@@ -313,8 +312,8 @@ function UserDashboard(props) {
 		}
 
     const options = {
-			key: 'rzp_test_m1pxa5JKJbAV4p',
-      // key: 'rzp_live_dsnDbV7kqj8n52',
+			// key: 'rzp_test_m1pxa5JKJbAV4p',
+      key: 'rzp_live_dsnDbV7kqj8n52',
 			currency: 'INR',
 			amount: total*100,
 			name: 'Uniaone Family Payment',
@@ -336,18 +335,18 @@ function UserDashboard(props) {
         
       }
 
-      if(response.razorpay_payment_id){
-        cart.map ((k)=>{
-          const userconinfo = {
-            "email": user.email,
-            "detail": k.detail,
+    //   if(response.razorpay_payment_id){
+    //     cart.map ((k)=>{
+    //       const userconinfo = {
+    //         "email": user.email,
+    //         "detail": k.detail,
             
-            "price": k.price
-          }
-          addDoc(userConsultBookingRef, userconinfo)
-        })
+    //         "price": k.price
+    //       }
+    //       addDoc(userConsultBookingRef, userconinfo)
+    //     })
       
-    }
+    // }
 
 	
 			},
@@ -377,8 +376,6 @@ function UserDashboard(props) {
 
   return (
     <>
-    <br/>
-    <br/><br/><br/>
 
 <Navbar/>
 <ul class="nav nav-pills mb-3 text-ligh shadow  " id="pills-tab" role="tablist">
@@ -392,14 +389,14 @@ function UserDashboard(props) {
     <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Consult</button>
   </li>
   <li class="nav-item" role="presentation">
-    <button class="nav-link" id="pills-myappointment-tab" data-bs-toggle="pill" data-bs-target="#pills-myappointment" type="button" role="tab" aria-controls="pills-myappointment" aria-selected="false">My Appointment</button>
+    <button class="nav-link" id="pills-myappointment-tab" data-bs-toggle="pill" data-bs-target="#pills-myappointment" type="button" role="tab" aria-controls="pills-myappointment" aria-selected="false">Labtest</button>
   </li>
   <li class="nav-item" role="presentation">
-    <button class="nav-link" id="pills-numberupdate-tab" data-bs-toggle="pill" data-bs-target="#pills-numberupdate" type="button" role="tab" aria-controls="pills-numberupdate" aria-selected="false">Phone Number Quick Update </button>
+    <button class="nav-link" id="pills-numberupdate-tab" data-bs-toggle="pill" data-bs-target="#pills-numberupdate" type="button" role="tab" aria-controls="pills-numberupdate" aria-selected="false">Help Desk </button>
   </li>
 </ul>
 <div class="tab-content" id="pills-tabContent">
-   <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">...
+   <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
   
   <div className='userinfo'>
         
@@ -420,104 +417,8 @@ function UserDashboard(props) {
         )})}
         </div>
             
-            {emailVerified ?(
-            
-              <div className='right'>
-                <h3 style={{margin:30}}>Yours Appointments</h3>
-                {appointmentinfo.map((ainfo) => { return (
-                  <div key={appointmentinfo.id} style={{margin:30}}>
-                    
-                    <h3 style={{margin:30}}>You Have Appointment With Dr. {ainfo.Appointment_with}</h3>
-                    <h3 style={{margin:30}}>At : {ainfo.Time} </h3>
-                    <h3 style={{margin:30}}>Date: {ainfo.Date}</h3>
-                  </div>
-                )})}
-                
-                 
-              <h2 style={{margin:30}}>Yours LabtestBookings :- </h2>
-              <div className="row" style={{margin:5}}>
-               {labtestbookinfo.map((labinfo) => { 
-                
-                return (
-                  <div className="col" key={labinfo.id}>
-                    <div className="test1">
-                      <div className="card text-center" >
-                        <div className="card-body">
-                          <h5 className="card-title">{labinfo.name}</h5>
-                          <p className="card-text">{labinfo.detail}</p>
-                          <h6 >₹{labinfo.price}</h6>
-              
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                )})}
-                </div>
-                
 
-
-                <h2 style={{margin:30}}>Yours ConsultBookings :- </h2>
-              <div className="row" style={{margin:5}}>
-               {consultbookinfo.map((consainfo) => { 
-                
-                return (
-                  <div className="col" key={consainfo.id}>
-                    <div className="test1">
-                      <div className="card text-center" >
-                        <div className="card-body">
-                       
-                          <p className="card-text">{consainfo.detail}</p>
-                          <h6 >₹{consainfo.price}</h6>
-              
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                )})}
-                </div>
-                
-
-
-              </div>
-              ):(
-                <div className='right'>
-                <h2 style={{ display: "block",margin:50 }}>You Need to Verify your Email to see the Appointments</h2>
-  
-              </div>
-              )
-            }
-        
-  </div> 
-
-  <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-  {emailVerified ?(
-<div className="App">
-  <input type="file"onChange={(event) => {
-   setImageUpload(event.target.files[0])}}/>
-  <button onClick ={uploadImage}> Upload image</button><br/><br/>
- {p.map((n)=> {
-    return (
-    <img src={n}  class="img-fluid" width="250" height="300" alt=''></img>
-  )
- })}
-   
-  
-</div>
-
-):(
-  <div className='right'>
-  <h4 style={{ display: "block",margin:50, color: "purple"}}>You Need to Verify your Email to see the Helath Records</h4>
-
-</div>
-)
-}
-
-    <Record/>
-  </div>
-  <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">...3
-
-  
-  <h4 style={{margin:30, color: "purple"}}>Your Orders</h4>
+        <h4 style={{margin:30, color: "purple"}}>Your Orders</h4>
               
               {cart.length > 0 ?(
                 <> 
@@ -579,6 +480,132 @@ function UserDashboard(props) {
               ):(
                 <h3 style={{margin:30}}>Cart is Empty!!!</h3>
               )}
+
+            {emailVerified ?(
+            
+              <div className='right'>
+                <h3 style={{margin:30}}>Yours Appointments</h3>
+                {appointmentinfo.map((ainfo) => { return (
+                  <div key={appointmentinfo.id} style={{margin:30}}>
+                    
+                    <h3 style={{margin:30}}>You Have Appointment With Dr. {ainfo.Appointment_with}</h3>
+                    <h3 style={{margin:30}}>At : {ainfo.Time} </h3>
+                    <h3 style={{margin:30}}>Date: {ainfo.Date}</h3>
+                  </div>
+                )})}
+                
+                 
+              <h2 style={{margin:30}}>Yours LabtestBookings :- </h2>
+             
+        <div className="album py-3"> 
+        <div className="container">
+              <div className="row" >
+               {labtestbookinfo.map((labinfo) => { 
+                
+                return (
+                  <div className="col-3" key={labinfo.id}>
+                      <div className="card mb-4 border-primary box shadow ">
+                  
+                        <div className="card-body">
+                          <h5 className="card-text">{labinfo.name}</h5>
+                          <p className="card-text">{labinfo.detail}</p>
+                          <h6 className="card-text">₹{labinfo.price}</h6>
+                          <div className="d-flex justify-content-between align-items-center">
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                 
+                )})}
+                </div>
+                </div>
+                </div>
+
+
+                {/* <h2 style={{margin:30}}>Yours ConsultBookings :- </h2>
+              <div className="row" style={{margin:5}}>
+               {consultbookinfo.map((consainfo) => { 
+                
+                return (
+                  <div className="col" key={consainfo.id}>
+                    <div className="test1">
+                      <div className="card text-center" >
+                        <div className="card-body">
+                       
+                          <p className="card-text">{consainfo.detail}</p>
+                          <h6 >₹{consainfo.price}</h6>
+              
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )})}
+                </div> */}
+                
+
+
+              </div>
+              ):(
+                <div className='right'>
+                <h2 style={{ display: "block",margin:50 }}>You Need to Verify your Email to see the Appointments</h2>
+  
+              </div>
+              )
+            }
+        
+  </div> 
+
+  <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+    <div className='userinfo'>
+        
+        {userinfo.map((uinfo) => { return (
+          <div key={userinfo.id} style={{margin:14}}>
+            <h4> <center> Welcome Mr. {uinfo.fullname} </center></h4>
+
+            <h5>
+              <center>
+                Your mobile : {uinfo.mobile}
+              </center>
+            </h5>
+          </div>
+        )})}
+        </div>
+    <h3 style={{ color: "purple", textAlign: "center" }}>YOUR HEALTH RECORD SECURE  <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" style={{color: "blue"}} fill="currentColor" class="bi bi-patch-check-fill" viewBox="0 0 16 16">
+  <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z"/>
+</svg></h3><br/>
+  {emailVerified ?(
+<div className="App">
+  <input type="file" style={{  margin:10 }}onChange={(event) => {
+   setImageUpload(event.target.files[0])}}/>
+  <button onClick ={uploadImage} class="btn btn-outline-success"> UPLOAD HEALTH RECORD</button><br/><br/>
+ {p.map((n)=> {
+    return (
+     
+          
+    <img src={n} style={{  margin:15 }} class="img-fluid " width="200" height="260" alt=''></img>
+   
+   
+  )
+ })}
+   
+  
+</div>
+
+):(
+  <div className='right'>
+  <h4 style={{ display: "block",margin:50, color: "purple"}}>You Need to Verify your Email to see the Helath Records</h4>
+
+</div>
+)
+}
+
+
+  </div>
+  <br/><br/>
+  <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+
+  
+  
 
 {/*   
   {/* <h4 style={{margin:30, color: "purple"}}>Your Orders</h4>
@@ -668,9 +695,78 @@ function UserDashboard(props) {
               )
             // } */} 
   </div>
-  <div class="tab-pane fade" id="pills-myappointment" role="tabpanel" aria-labelledby="pills-myappointment-tab">...4</div>
+  <div class="tab-pane fade" id="pills-myappointment" role="tabpanel" aria-labelledby="pills-myappointment-tab"> 
+  <h2 style={{margin:30}}>Yours LabtestBookings :- </h2>
+             
+             <div className="album py-3"> 
+             <div className="container">
+                   <div className="row" >
+                    {labtestbookinfo.map((labinfo) => { 
+                     
+                     return (
+                       <div className="col-3" key={labinfo.id}>
+                           <div className="card mb-4 border-primary box shadow ">
+                       
+                             <div className="card-body">
+                               <h5 className="card-text">{labinfo.name}</h5>
+                               <p className="card-text">{labinfo.detail}</p>
+                               <h6 className="card-text">₹{labinfo.price}</h6>
+                               <div className="d-flex justify-content-between align-items-center">
+                                 </div>
+                             </div>
+                           </div>
+                         </div>
+                      
+                     )})}
+                     </div>
+                     </div>
+                     </div>
+  </div>
   <div class="tab-pane fade" id="pills-numberupdate" role="tabpanel" aria-labelledby="pills-numberupdate-tab">
-  <Phonesign/>
+ <h3 style={{textAlign: "center"}}> Anywhere, At any time Email or call if you have a health related problem.</h3><br/>
+ 
+ <div className="album py-5">
+        
+        <div className="container">
+
+            <div className="row">
+            <div className="col-md-6 ">
+                    <div className="card mb-4 box shadow">
+                    <div className="card-body">
+                    <h5  style={{textAlign: "center"}}>Official Email Id: <button className="btn btn-outline-primary"> care@uniaonefamily.com </button></h5>
+                            <div className="d-flex justify-content-between align-items-center">
+                               
+                                
+                            </div>
+
+                        </div>
+                      
+                    
+                    </div>
+
+                  
+                </div>
+                <div className="col-md-6 ">
+                    <div className="card mb-4 box shadow">
+                    <div className="card-body">
+                    
+                    <h5  style={{textAlign: "center"}}>Help Line Number <a href="tel:+91 9933798896"  className="btn btn- btn-outline-">+91 9933798896</a></h5>
+                            <div className="d-flex justify-content-between align-items-center">
+                               
+                                
+                            </div>
+
+                        </div>
+                      
+                    
+                    </div>
+
+                  
+                </div>
+                </div>
+                </div>
+                </div>
+ 
   </div>
 </div>
 

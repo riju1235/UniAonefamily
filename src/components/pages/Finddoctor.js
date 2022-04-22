@@ -4,7 +4,6 @@ import {Link, useNavigate} from 'react-router-dom';
 import { collection, getDocs, } from "firebase/firestore";
 import {db} from '../../firebase'
 import FindDoctor from '../images/bookdoctor.jpg';
-import General from '../images/general.jpg';
 import Newtonp from '../images/newtonpatel.jpg';
 import DoctorSneha from '../images/sneha.jpg';
 import Healthrecord from '../images/healthrecord.png';
@@ -49,7 +48,7 @@ function Finddoctor (props) {
 <div className="card mb-3" >
   <div className="row g-0">
     <div className="col-md-4">
-      <img src={General}  alt="General"></img>
+      <img src="/"  alt="General"></img>
     </div>
     <div className="col-md-8">
       <div className="card-body ">

@@ -44,9 +44,17 @@ const AddBook = () => {
     return (
         <>
            <br/><br/>
-           <div className="updatesur">
+          
+               
+           <div className="album py-2">
+           <div className="container">
+
+<div className="row justify-content-center">
+        <div className="col-md-5">
            <Card body shadow>
-        <div className="p-3 box " >
+           <div className="card mb-4 box-shadow">
+             
+        
         {massage?.msg && (<Alert variant={massage?.error ? "danger": "success"}
          dismissible 
          onClose={() => setMassage("")}
@@ -126,9 +134,15 @@ const AddBook = () => {
 
             </Form>
           
+       
         </div>
         </Card>
         </div>
+        </div>
+        </div>
+        </div>
+       
+    
       
         </>
 

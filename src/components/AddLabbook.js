@@ -1,10 +1,19 @@
 import React, { useState } from "react";
+import DatePicker from 'react-datepicker'
+import 'react-datepicker/dist/react-datepicker.css'
+import { TimePickerComponent } from "@syncfusion/ej2-react-calendars"
 import { Form, Alert, InputGroup, Button, ButtonGroup, Card, Row, Col } from "react-bootstrap";
 import BookDataLabbook from "../services/book.labbooks";
 
 
 const AddLabbook = () => {
+    const [selectedDate, setSelectedDate] = useState(null)
+    const [selectedTime ,setSelectedTime] = useState(null)
+    const minTime: Date = new Date("10/03/2021 10:00 AM")
+    const maxTime: Date = new Date("10/03/2021 05:00 PM")
     const [title, setTitle] = useState(""); 
+    const [dated, setDated] = useState(""); 
+    const [times, setTimes] = useState(""); 
     const [landmark, setLandmark] = useState(""); 
     const [house, setHouse] = useState(""); 
     const [gender, setGender] = useState(""); 
@@ -21,12 +30,14 @@ const AddLabbook = () => {
    const handleSubmit = async  (e) => {
        e.preventDefault();
        setMassage("");
-       if(title === "" || mobile === "" || emailaddress === "" || date === "" || pincode ==="" || house ==="" || landmark === "" || gender === "") {
+       if(title === "" || mobile === "" || emailaddress === "" || date === "" || pincode ==="" || house ==="" || landmark === "" || gender === "" || dated === "" || times === "") {
            setMassage({error: true, msg : "All field are mandator"});
            return;
        }
        const newBook = {
            title,
+           times,
+           dated,
            landmark,
            house,
            mobile,
@@ -53,6 +64,8 @@ const AddLabbook = () => {
        setDate("");
        setPincode("");
        setGender("");
+       setDated("");
+       setTimes("");
    };
     return (
         <>
@@ -166,8 +179,22 @@ const AddLabbook = () => {
                      />
                    
                 </Form.Group>
+                <DatePicker className='date-picker  mt-8' selected={dated} 
+                placeholderText="Select a Date" 
+                onChange= {date => setDated(date)}
+               
+                dateFormat='dd/MM/yyyy'
+                minDate={new Date()}
+                isClearable
+                required>
+                </DatePicker>
+                <div className='time-picker mt-3'>
+                    <TimePickerComponent onChange= {(e) => setTimes(e.target.value)} placeholder='Select a time' min={minTime} max={maxTime} value ={ times } isClearable required>
 
-
+                    </TimePickerComponent>
+                </div>
+               
+               
                 {/* <ButtonGroup aria-lable="Basic example" className="mb-3">
                     <Button 
                     disabled={flag} variant="success" 
@@ -186,8 +213,8 @@ const AddLabbook = () => {
                         >Not Available</Button>
         
                 </ButtonGroup> */}
-
-                        <div className="d-grid gap-2">
+<br/>
+                        <div className="d-grid gap-3">
                             <Button variant="outline-primary" type="Submit">
                            Submit
                             </Button>

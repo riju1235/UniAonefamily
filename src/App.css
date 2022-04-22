@@ -197,37 +197,9 @@ a {
   margin-left: 3rem;
   color: rgb(12, 31, 134);
 } */
-.updatdoct{
-  margin-left: 410px;
-  padding:10px;
-   width: 540px;
 
-  }
-  @media (max-width: 700px)  {
-    .updatdoct {
-      content: 'Best on wider screens.';
-      display: block;
-      margin: 0em;
-    
-      color: #444;
-    }
-  }
-
-  @media (max-width: 900px)  {
-    .updatdoct {
-      content: 'Best on wider screens.';
-      display: block;
-      margin: 0em;
-    
-      color: #444;
-    }
-  }
 
   
-  .demo2{
-    margin-left: 144px;
-    color: rgb(12, 31, 134);
-  }
   .Dashboard{
     margin-left: 420px;
     color: rgb(23, 23, 175);
@@ -249,4 +221,10 @@ a {
 
 .careercolornwe{
   color: rgb(30, 5, 128);
+}
+.corporateee{
+  color: rgb(0, 4, 110);
+}
+.technology{
+  color: rgb(0, 4, 110);
 }

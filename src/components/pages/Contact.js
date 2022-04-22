@@ -14,7 +14,7 @@ function Contact (props) {
 
 <div className="logoconta">
 <Link to="/">
-  <img src={Logo} className="img-fluid" alt="Logos"/>
+  <img src={Logo} className="img-fluid" width="200" height="80"  alt="Logos"/>
   </Link></div>
 <nav>
   <div class="nav nav-tabs " id="nav-tab" role="tablist">
@@ -45,7 +45,7 @@ function Contact (props) {
                     <div className="card-body">
                     <h5 className="card-text">Company Profile</h5>
                             <p className="card-text"><small> UNIAONE SAVE FAMILY SERVICES PRIVATE LIMITED</small></p>
-                            <h6 className="card-text"><small>   Corporate Identity Number : U85300WB2020PTC238719   <br/>Copyright © Uniaone Family <br/> Grievance Officer : Sudipta Mondal <br/>For queries and grievances, reach us at grievance@uniaonefamily.com</small></h6>
+                            <h6 className="card-text"><small>   Corporate Identity Number : U85300WB2020PTC238719   <br/>Copyright © Uniaone Family <br/> Grievance Officer : Sudipta Mondal <br/>For queries and grievances, reach us at   <br/>care@uniaonefamily.com</small></h6>
                           
                           
                             <div className="d-flex justify-content-between align-items-center">
@@ -63,7 +63,7 @@ function Contact (props) {
                   
                     <div className="card-body">
                     <h5 className="card-text">Contact Details</h5>
-                            <p className="card-text">+91 99337 98896  <br/>+91 98001 52166<br/> Official EmailId : help@uniaonefamily.com</p>
+                            <p className="card-text">+91 99337 98896  <br/>+91 98001 52166<br/></p>
          
                             
                             <div className="d-flex justify-content-between align-items-center">
@@ -82,7 +82,7 @@ function Contact (props) {
                   
                     <div className="card-body">
                     <h5 className="card-text">For Doctor</h5>
-                            <p className="card-text"> Email:doctors@uniaonefamily.com</p>
+                            <p className="card-text"> Email: care@uniaonefamily.com</p>
                             <div className="d-flex justify-content-between align-items-center">
                                
                            

@@ -18,6 +18,7 @@ import Surgery from './components/pages/Surgery';
 import Corporate from './components/pages/Corporate';
 import Post from './components/pages/Post';
 import Job from './components/pages/Job';
+import Social from './components/pages/Social';
 
 import Contact from './components/pages/Contact';
 import About from './components/pages/About';
@@ -59,6 +60,7 @@ function App() {
     
      <Routes>
      <Route axact path="/addlabbook" element={<AddLabbook/>}/>
+     <Route axact path="/socialwork" element={<Social/>}/>
      <Route axact path="/developers" element={<Developers/>}/>
      <Route axact path="/press" element={<Press/>}/>
      <Route axact path="/paginationOld" element={<PaginationOld/>}/>
@@ -112,7 +114,7 @@ function App() {
        <Route axact path="/Corporate" element={<Corporate heading1="#Unioanefamily for Corporates" head2="Create customized health plans for your employees that cater to their health" head2br="and wellness needs. Talk to our experts for more details." head3="Get your organization’s health and wellness" head3br=" programme powered by Uniaonefamily" emplsiz="Choose..." emplsiz2="˂=500" emplsiz3="501-1000" emplsiz4="1001-2000" emplsiz5="2001-5000" emplsiz6="5001-10000" emplsiz7="10001-50001" 
           emplsiz8="50001-1Lakh" emplsiz9="1Lakh-5Lakh" emplsiz10="5Lakh+" sub="Submit" employeesp="Choose the best for you and your employees"  feture1="FIND DOCTOR" feturec1="Book doctor appointment" feturecbr1="all specialities" feture2="24X7 HOURSE" feturec2="Online surgeries book accreoss 20+ specialities" feture3="LIFE TIME HEALTH RECORDS" feturec3="All your medical records" feture4="DIAGNOSTIC TEST" feturec4="Free home sample collection" feture5="24/7 Mental Health" feturec5="Online doctor consultaion accreoss 20+ specialities" 
           feture6="INDIA'S VERIFIED CLINICS" feturec6="Search Clinic" whyunia="Why Choose Uniaonefamily?" trustuser="Trusted by 2 lakhs+ users every month" custo="2 Lakhs+" last1="Monthly Customer" verified="10000+" last2="Verifiyed Doctor" appoint="4 Lakhs+" last3="Doctor Appointment"    />}/>
-      <Route axact path="/RegisterDoc" element={<RegisterDoc/>}/>
+      <Route axact path="/RegisterDoctor" element={<RegisterDoc/>}/>
           <Route axact path="/AllDoctors" element={<AllDoctors/>}/>
           <Route path="/DocConsult/:docId" element={<DocConsult/>}/>
           <Route axact path="/UserDashboard/:userId" element={<ProtectedRoute> <UserDashboard/> </ProtectedRoute>}/>

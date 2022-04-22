@@ -54,12 +54,18 @@ const AddCorporate = () => {
     return (
         <>
            <br/>
-           <div className="updatdoct">
+           
+           <div className="album py-4">
+           <div className="container">
+
+<div className="row justify-content-center">
+        <div className="col-md-6">
            <Card body >
+           <div className="card mb-4 box-shadow">
                <br/>
-               <div className="demo2">
-               <h5>Doctor Profile Details</h5>
-               </div>
+              
+               <h5 style={{textAlign: "center", color: "blue"}}>Doctor Profile Details</h5>
+              
                <br/>
         <div className="p-3 box shadow " >
         {massage?.msg && (<Alert variant={massage?.error ? "danger": "success"}
@@ -204,8 +210,13 @@ const AddCorporate = () => {
             </Form>
           
         </div>
+        </div>
         </Card>
         </div>
+        </div>
+        </div>
+        </div>
+       
       
         </>
 

@@ -5,21 +5,18 @@
    
    }
    .supportno1{
-       color: rgb(108, 112, 139);
+       color: rgb(13, 27, 114);
    }
    .logoconta{
-       margin-left: 500px;
+    text-align: center;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 100%;
    }
    
-@media (max-width: 700px)  {
-    .logoconta {
-      content: 'Best on wider screens.';
-      display: block;
-      margin: 4em;
-    
-     
-    }
-  }
+
 
   .sizesc{
     display: flex;

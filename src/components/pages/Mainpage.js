@@ -3,19 +3,19 @@ import {Link} from 'react-router-dom';
 import Slider from '../inc/Slider';
 import Navbar from '../inc/Navbar';
 import './Mainpage.css';
-import Lab from '../images/Blood.jpg';
-import Finddoctor from '../images/finddoctor.jpg';
-import Consult from '../images/doct.jpg';
-import Surgerym from '../images/surgerym.jpg';
-import Periods from '../images/Periods.jpg';
-import Acne from '../images/Acne.jpg';
-import Bedissue from '../images/BEDISSUE1.jpg';
-import Fever from '../images/fever.jpg';
-import Depration from '../images/depression.jpg';
-import Feeling from '../images/feeling.jpg';
-import Pregnency from '../images/Pregnency.jpg';
-import Dentist from '../images/dentist.jpg';
-import Genral from '../images/general.jpg';
+import Lab from '../images/labs.jpg';
+import Finddoctor from '../images/findd.jpg';
+import Consult from '../images/consa.jpg';
+import Surgerym from '../images/surgeryyyy.jpg';
+import Periods from '../images/preg.jpg';
+import Acne from '../images/acne9.jpg';
+import Bedissue from '../images/bediss.jpg';
+import Fever from '../images/feverflue.jpg';
+import Depration from '../images/depre.jpg';
+import Feeling from '../images/childnotfelling.jpg';
+import Pregnency from '../images/pregne.jpg';
+import Dentist from '../images/dentist12.jpg';
+import Genral from '../images/genaa.jpg';
 import Coronavirus from '../images/corona1.jpg';
 import Health from '../images/dailyh.jpg';
 
@@ -25,7 +25,9 @@ function Mainpage (props) {
     return (
 
             <div>
-               <Navbar/>
+              
+             <Navbar/>
+
                <Slider />
                <br/>
                <div className="india">
@@ -33,28 +35,12 @@ function Mainpage (props) {
 of all countries healthy</b></h1></div>
                 <br/>
                
-                <div className="fixed-bottom " style={{textAlign: "center"}}>
-                <div class="btn-group" role="group" aria-label="Basic outlined example">
-                  <Link to="/corporate">
-    <button type="button" class="btn btn-outline-secondary">Corporate Wellness</button></Link>
-    <Link to="/registerdoc">
-    <button type="button" class="btn btn-outline-success">Doctor Profile</button>
-    </Link>
-    <Link to="/surgery">
-    <button type="button" class="btn btn-outline-primary">Top Surgeries</button>
-    </Link>
-    <Link to="/clinic">
-    <button type="button" class="btn btn-outline-danger">India's Varified Clinc</button>
-    </Link>
-  </div>
-
-</div>
+       
 
               
-                
+  
 
-
-                <div className="album py-5">
+                <div className="album py-2">
         
         <div className="container">
 
@@ -165,10 +151,24 @@ of all countries healthy</b></h1></div>
        
         <br></br>
         <div class="p-3 mb-2 bg-primary text-white">
-          <div className="consult">
-            <h3>{props.consulttop}</h3>
-            <p>{props.verif}</p>
-          </div>
+        <div className="album py-2">
+        
+        <div className="container">
+
+            <div className="row">
+            <div className="col-md-7">
+              
+                    <div className="card-body">
+                            <h4 className="card-text mb-2">Consult top doctors online for any health concern</h4>
+                            <p className="card-text">Private online consultation with verified doctors in all specialist</p>
+                    
+                    </div>
+
+                  
+                </div>
+                </div>
+                </div>
+                </div>
         </div>
 <br></br>
 
@@ -301,18 +301,32 @@ of all countries healthy</b></h1></div>
                             </div>
                            
             </div>
-      <br></br>
      
       <div className="p-3 mb-2 bg-info text-dark">
+      <div className="album py-2">
         
-      <div className="clinic">
-        <h4>{props.clinic}</h4>
-      <p>{props.clinicc}</p></div>
+        <div className="container">
+
+            <div className="row">
+            <div className="col-md-7">
+              
+                    <div className="card-body">
+                            <h4 className="card-text mb-2">Book an appointment for an in-clinic consultation</h4>
+                            <p className="card-text">Find experienced doctors across all specialists</p>
+                    
+                    </div>
+
+                  
+                </div>
+                </div>
+                </div>
+                </div>
+
       </div>
       <br></br>
      
 
-      <div className="album py-5">
+      <div className="album py-3">
         
         <div className="container">
 

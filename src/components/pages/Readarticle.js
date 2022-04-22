@@ -42,17 +42,16 @@ useEffect(() => {
     return (
       
         <div>
-          {/* width="240" height="50" */}
-          {/* <Navbar/> */}
-    <div class="fixed-top shadow">
-<Navbar bg="white" expand="lg shadow "  >
+        
+   
+<Navbar bg="whaite shadow" expand="lg" >
   <Container fluid>
     <Navbar.Brand> <Link to="/"> <img src={Logo} className="img-fluid"  alt="Logos"/></Link></Navbar.Brand>
     <Navbar.Toggle aria-controls="navbarScroll" />
     <Navbar.Collapse id="navbarScroll">
       <Nav
-        className="me-auto my-2 my-lg-0"
-        style={{ maxHeight: '100px' }}
+        className="me-auto my-2 my-lg-2"
+        style={{ maxHeight: '160px' }}
         navbarScroll
       >
         <Link to="/readarticle">
@@ -77,54 +76,10 @@ useEffect(() => {
     </Navbar.Collapse>
   </Container>
 </Navbar>
-</div>
 
-            <div className="article1">
+
               
-           
-            <nav className="navbar navbar-expand-lg navbar-light bg-white">
-  <div className="container-fluid">
-   
-    <Link to="/" className="navbar-brand">Home</Link>
-    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span className="navbar-toggler-icon"></span>
-    </button>
-    <div className="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-        <li className="nav-item">
-          <a className="nav-link " aria-current="page" href="#">Healthy Skin</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="#">Healthy Hair</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="#">Healthy Eating</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="#">Childhood Nutrition </a>
-        </li>
-        <li className="nav-item dropdown">
-          <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-           100+ Health Tips
-          </a>
-          <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a className="dropdown-item" href="#">Action</a></li>
-            
-            <li><a className="dropdown-item" href="#">Another action</a></li>
-            <li><hr className="dropdown-divider"/></li>
-            <li><a className="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-       
-      </ul>
       
-      <form className="d-flex">
-        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button className="btn btn-outline-success" type="submit">Search</button>
-      </form>
-    </div>
-  </div>
-</nav>
 
 
 <br/>
@@ -182,7 +137,7 @@ useEffect(() => {
                             </div>
                             </div>
             </div>
-            </div>
+       
       
      
     

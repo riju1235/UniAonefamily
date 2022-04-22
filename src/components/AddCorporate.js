@@ -48,12 +48,12 @@ const AddCorporate = () => {
     return (
         <>
            <br/>
-          
-           <div className="album py-5">
+          <br/>
+           <div className="album py-4">
            <div className="container">
 
-<div className="row">
-        <div className="col-md-5">
+<div className="row  justify-content-center">
+        <div className="col-md-6">
            <Card body >
                <br/>
                <div className="card mb-4 box-shadow">

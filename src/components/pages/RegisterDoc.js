@@ -43,13 +43,11 @@ function RegisterDoc(props) {
     }
   return (
       
-    <div className="main">
+    <div>
         <Navbar/>
-        <br/><br/>
-        {/* <div className="fixed8"> */}
+      
             
         <img src={DoctorP} class="img-fluid"  width="1900" height="400" alt="DoctorP"></img>
-        {/* </div> */}
         <AddDoctor/>
         <br/>
 <hr/>

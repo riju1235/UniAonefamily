@@ -6,7 +6,6 @@ function Developers (props) {
     return (
             <>
             <Navbar/>
-            <br/><br/><br/>
             <img src={Web}  class="img-fluid" width="1349" height="400"  alt="Web"></img>
             <div className="p-3 mb-2 bg-light text-dark">
                 <br/><br/>
@@ -21,7 +20,7 @@ function Developers (props) {
                     <div className="card mb-4 box shadow">
                     <div className="card-body">
                         
-                            <h3 className="card-text">Web Development </h3><br/>
+                            <h4 className="card-text">WEB DEVELOPMENT </h4><br/>
                             <p className="card-text">We have an excellent team of web development experts who are constantly experimenting and implementing innovative ideas that will transform website designs into a gold mine for your business.</p><br/>
                             
                            
@@ -36,9 +35,9 @@ function Developers (props) {
                 <div className="col-md-6">
                     <div className="card mb-4 box shadow">
                     <div className="card-body">
-                            <h3 className="card-text">Our Project Create</h3><br/>
-                            <p className="card-text">SCHOOL WEBSITE<br/>HEALTH WEBSITE<br/>E COMMARS WEBSITE</p>
-                            <br/>
+                            <h4 className="card-text">TOP-QUALITY WEB DEVELOPMENT SERVICES</h4><br/>
+                            <p className="card-text">SCHOOL WEBSITE<br/>HEALTH WEBSITE<br/>E-COMMERCE WEBSITE<br/>TAX WEBSITE</p>
+                        
                             
                             <div className="d-flex justify-content-between align-items-center">
                                

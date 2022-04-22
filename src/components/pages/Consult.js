@@ -1,4 +1,5 @@
 import React, {useReducer, useState, useEffect} from 'react';
+import PaginationOld from './PaginationOld';
 import { collection, getDocs, } from "firebase/firestore";
 import {db} from '../../firebase'
 import { cartReducer } from '../../redux/cartReducer';
@@ -10,6 +11,19 @@ import './Consult.css';
 import Consultation from '../images/cons.jpg';
 
 function Consult(props) {
+  const [showPerPage, setShowPerPage] = useState(4);
+  const [pagination, setPagination] =useState({
+      start: 0,
+      end: showPerPage,
+  });
+
+  const onPaginationChange = (start,  end) =>{
+      setPagination({start: start, end: end});
+  };
+  const [searchTerm, setsearchTerm] = useState("");
+  
+    
+
   const [pconsults, setPconsults] = useState([])
   const pconsultRef = collection(db, "Pconsults")
   const [consults, setConsults] = useState([])
@@ -47,31 +61,78 @@ const {
      
     <div className="special">
       <Navbar/>
-      <br/><br/><br/>
+    
       
            
            <img src={Consultation} class="img-fluid"   width="1349" height="500" alt="..."></img>
         
 
-     
-  <div className="cons">
-          <br></br>
-          <br></br>
-           <h3>{props.speciality}</h3>
-           <br/>
-           <p>{props.text4}</p>
+           <div className="album py-2">
+        
+        <div className="container">
 
-           </div>
-           <br/>
+            <div className="row">
+            <div className="col-md-4 ">
+              
+                    <div className="card-body">
+                            <h3 className="card-text mb-4">20+ Speciality</h3>
+                            <p className="card-text">Consult with top Doctors across specialities</p>
+                    
+                    </div>
 
+                  
+                </div>
+                </div>
+                </div>
+                </div>
 
-           <div className="album py-5">
+           <div className="album py-1">
+        
+            <div className="container">
+
+                <div className="row">
+                <div className="col-md-6">
+                        
+                        <div className="card-body">
+                        <input type="text" class="form-control" placeholder="Ex. Fever, Sexual" name="location" 
+                        onChange ={(e) => {
+                          setsearchTerm(e.target.value);
+                        }}
+                        />
+                                <div className="d-flex justify-content-between align-items-center">
+                                   
+                                    
+                            
+
+                            </div>
+                          
+                        
+                        </div>
+
+                      
+                    </div>
+                
+                    </div>
+                    </div>
+                    </div>
+
+           <div className="album py-3">
         
             <div className="container">
 
                 <div className="row">
 
-                {consults.map((consult) => { return (
+                {consults.filter((val)=>{
+                  if (setsearchTerm === ""){
+                    return val;
+                  } else if (
+                  
+                    val.detail.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                    val.price.toLowerCase().includes(searchTerm.toLowerCase()) 
+                  ){
+                    return val;
+                  }
+                }).map((consult) => { return (
                     <div className="col-md-2" key={consult.id}>
                         <div className="card mb-4 box-shadow">
                             <img className="card-img-top "  src={consult.consultImg}  alt="doc1" />
@@ -205,22 +266,35 @@ const {
   
   {/* </div>
   </div> */}
- 
-  <br/>
-  <div className="common">
-  <h3>{props.common}</h3>
-  <br/>
-  <p>{props.commonp}</p>
-  </div>
-  <br></br>
+  
+  <div className="album py-1">
+        
+        <div className="container">
 
-  <div className="album py-5">
+            <div className="row">
+            <div className="col-md-6 ">
+              
+                    <div className="card-body">
+                            <h3 className="card-text mb-4">Common Health Concerns</h3>
+                            <p className="card-text">Consult a doctor online for any health issue</p>
+                       
+                      
+                    
+                    </div>
+
+                  
+                </div>
+                </div>
+                </div>
+                </div>
+  
+  <div className="album py-4">
         
         <div className="container">
 
             <div className="row">
 
-            {pconsults.map((pconsult) => { return (
+            {pconsults.slice(pagination.start, pagination.end).map((pconsult) => { return (
                 <div className="col-md-3" key={pconsult.id}>
                     <div className="card mb-4 box-shadow ">
                         <img className="card-img-top "  src={pconsult.conImg}  alt="doc1" />
@@ -250,7 +324,7 @@ const {
           )}
         </div>
       </div>
-     
+    
     </div>
 
 )})}
@@ -259,8 +333,11 @@ const {
     
     
 </div>
+<PaginationOld showPerPage={showPerPage} 
+                onPaginationChange={onPaginationChange}
+                total={pconsults.length}
+                />
 </div>    
-
 
 </div>
 
@@ -363,11 +440,9 @@ const {
                   
                     <div className="card-body">
                     <h4 className="card-text"><center>{props.userb}</center></h4>
-                            <p className="card-text"><center>{props.userhap}</center></p>
+                            <p className="card-text"><center>{props.verifieddoc}</center></p>
                             <div className="d-flex justify-content-between align-items-center">
                                
-                                
-                          
 
                         </div>
                       

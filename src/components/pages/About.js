@@ -29,7 +29,6 @@ function About (props) {
     return(
       <>
         <Navbar/>
-      <br/><br/><br/><br/>
      
       <ul class="nav nav-pills mb-3 bg-light shadow"  id="pills-tab" role="tablist">
   <li class="nav-item" role="presentation">
@@ -38,12 +37,7 @@ function About (props) {
   <li class="nav-item" role="presentation">
     <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Leadership</button>
   </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Career</button>
-  </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link" id="pills-doctor-tab" data-bs-toggle="pill" data-bs-target="#pills-doctor" type="button" role="tab" aria-controls="pills-doctor" aria-selected="false">For Doctors</button>
-  </li>
+
 </ul>
 <div class="tab-content" id="pills-tabContent">
   <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
@@ -179,7 +173,7 @@ We started this work, we taught blind, handicapped computers. I want to teach up
             
                     <div className="card-body">
                     
-                       <img src= {Ceo1}  className="card-img-top" alt="doc1" />
+                       {/* <img src="/"  className="card-img-top" alt="doc1" /> */}
                             <div className="d-flex justify-content-between align-items-center">
                                </div>
                            
@@ -211,6 +205,8 @@ We started this work, we taught blind, handicapped computers. I want to teach up
               
                  
  <br/><br/><br/><br/>
+ <br/>
+ <hr/>
  <div className="album py-5">
         
         <div className="container">
@@ -236,12 +232,8 @@ We started this work, we taught blind, handicapped computers. I want to teach up
                             </div>
   </div>
   </div>
-  <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
-  <Job/>
-  </div>
-  <div class="tab-pane fade" id="pills-doctor" role="tabpanel" aria-labelledby="pills-doctor-tab">
-  <RegisterDoc/>
-  </div>
+ 
+ 
 </div>
 <br/><br/><br/>
 
