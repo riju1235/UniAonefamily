@@ -7,7 +7,7 @@ function Privacy (props) {
 
         <>
         <Navbar/>
-   
+        <br/><br/><br/>
 
 <div className="album py-5">
         

@@ -20,7 +20,7 @@ const AddCareer = () => {
        e.preventDefault();
        setMassage("");
        if(title === "" || mobile === "" || emailaddress === "" || experience === "" || city ==="" || jobcategary === "") {
-           setMassage({error: true, msg : "All field are mandator"});
+           setMassage({error: true, msg : "All fields are mandatory!"});
            return;
        }
        const newBook = {

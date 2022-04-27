@@ -13,7 +13,7 @@ import Backp from '../images/backp2.jpg';
 import Fitness from '../images/fit.jpg';
 import Tooth from '../images/gum4.jpg';
 import ToothAce from '../images/toothace.jpg';
-import Logo from '../images/logo11.jpg';
+import Logo from '../images/logo13.jpg';
 
 
 
@@ -40,13 +40,13 @@ useEffect(() => {
 
 
     return (
-      
-        <div>
+    
         
-   
-<Navbar bg="whaite shadow" expand="lg" >
+        <div className="mains container-fluid">
+<div class="fixed-top ">
+<Navbar bg="light shadow" expand="lg" >
   <Container fluid>
-    <Navbar.Brand> <Link to="/"> <img src={Logo} className="img-fluid"  alt="Logos"/></Link></Navbar.Brand>
+    <Navbar.Brand> <Link to="/"> <img src={Logo} className="img-fluid"  width="150" height="40" alt="Logos"/></Link></Navbar.Brand>
     <Navbar.Toggle aria-controls="navbarScroll" />
     <Navbar.Collapse id="navbarScroll">
       <Nav
@@ -76,12 +76,14 @@ useEffect(() => {
     </Navbar.Collapse>
   </Container>
 </Navbar>
-
+</div>
 
               
       
 
 
+<br/>
+<br/>
 <br/>
 <br/>
 
@@ -93,7 +95,7 @@ useEffect(() => {
 <br/>
 
 
-<div className="album py-5">
+<div className="album py-2">
         
         <div className="container">
 

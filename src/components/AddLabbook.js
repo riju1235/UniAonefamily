@@ -31,7 +31,7 @@ const AddLabbook = () => {
        e.preventDefault();
        setMassage("");
        if(title === "" || mobile === "" || emailaddress === "" || date === "" || pincode ==="" || house ==="" || landmark === "" || gender === "" || dated === "" || times === "") {
-           setMassage({error: true, msg : "All field are mandator"});
+           setMassage({error: true, msg : "All fields are mandatory!"});
            return;
        }
        const newBook = {

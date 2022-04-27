@@ -24,6 +24,7 @@ function Clinic (props) {
     return(
         <>
         <Navbar/>
+        <br/><br/><br/>
 <div className="album py-2">
         
         <div className="container">
@@ -89,7 +90,7 @@ function Clinic (props) {
                                 <div className="btn-group">
                                   
                                     
-                                <a href="tel: {clinic.mobile}"  className="btn btn- btn-outline-info">Call Now</a>
+                                <a href="tel: +91 9933798896"  className="btn btn- btn-outline-info">Call Now</a>
                                     <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
                           {clinic.mobile}
                                           </button>

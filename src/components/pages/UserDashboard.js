@@ -378,6 +378,7 @@ function UserDashboard(props) {
     <>
 
 <Navbar/>
+<br/><br/><br/><br/>
 <ul class="nav nav-pills mb-3 text-ligh shadow  " id="pills-tab" role="tablist">
   <li class="nav-item" role="presentation">
     <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Dashborad</button>
@@ -503,7 +504,7 @@ function UserDashboard(props) {
                {labtestbookinfo.map((labinfo) => { 
                 
                 return (
-                  <div className="col-3" key={labinfo.id}>
+                  <div className="col-6" key={labinfo.id}>
                       <div className="card mb-4 border-primary box shadow ">
                   
                         <div className="card-body">
@@ -696,7 +697,7 @@ function UserDashboard(props) {
             // } */} 
   </div>
   <div class="tab-pane fade" id="pills-myappointment" role="tabpanel" aria-labelledby="pills-myappointment-tab"> 
-  <h2 style={{margin:30}}>Yours LabtestBookings :- </h2>
+  <h2 style={{margin: 50}}>Yours LabtestBookings :- </h2>
              
              <div className="album py-3"> 
              <div className="container">
@@ -704,8 +705,8 @@ function UserDashboard(props) {
                     {labtestbookinfo.map((labinfo) => { 
                      
                      return (
-                       <div className="col-3" key={labinfo.id}>
-                           <div className="card mb-4 border-primary box shadow ">
+                       <div className="col-6" key={labinfo.id}>
+                           <div className="card mb-2 border-dark box shadow">
                        
                              <div className="card-body">
                                <h5 className="card-text">{labinfo.name}</h5>
@@ -750,7 +751,7 @@ function UserDashboard(props) {
                     <div className="card mb-4 box shadow">
                     <div className="card-body">
                     
-                    <h5  style={{textAlign: "center"}}>Help Line Number <a href="tel:+91 9933798896"  className="btn btn- btn-outline-">+91 9933798896</a></h5>
+                  <h5  style={{textAlign: "center"}}>Help Line Number <a href="tel:+91 9933798896"  className="btn btn- btn-outline-">+91 9933798896</a></h5>
                             <div className="d-flex justify-content-between align-items-center">
                                
                                 

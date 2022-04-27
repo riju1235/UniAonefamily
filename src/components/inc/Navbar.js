@@ -151,19 +151,18 @@ function NavBar (props) {
 
   return (
     
-<>
-
-<Navbar bg="light shadow "  expand="lg">
-  <Container fluid>
-  {/* <div className="logosider"> */}
-    <Navbar.Brand>
-    <Link to="/">
-    <img src={Logo} className="img-fluid"  width="190" height="60" alt="Logos"/></Link></Navbar.Brand>
-    <Navbar.Toggle aria-controls="navbarScroll" />
-    <Navbar.Collapse id="navbarScroll">
+<div className="mains container-fluid">
+   <div class="fixed-top shadow">
+     <Navbar bg="light"  expand="lg">
+          <Container fluid>
+         <Navbar.Brand>
+        <Link to="/">
+       <img src={Logo} className="img-fluid"  width="190" height="60" alt="Logos"/></Link></Navbar.Brand>
+       <Navbar.Toggle aria-controls="navbarScroll" />
+        <Navbar.Collapse id="navbarScroll">
       <Nav
         className="me-auto my-2 my-lg-0"
-        style={{ maxHeight: '350px' }}
+        style={{ maxHeight: '290px' }}
         navbarScroll
       >
         
@@ -174,7 +173,7 @@ function NavBar (props) {
         <Nav.Link><Link to="/clinic"><b>Clinic</b><br/><small>India's Varified Clinic</small></Link></Nav.Link>
         <Nav.Link><Link to="/hospital"><b>Hospital</b><br/><small>Search Best Hospital</small></Link></Nav.Link>
         <NavDropdown title="For Providers" id="navbarScrollingDropdown">
-          <NavDropdown.Item><Link to="/corporate">Corporate Wellness</Link></NavDropdown.Item> <br/>
+          <NavDropdown.Item ><Link to="/corporate" > Corporate Wellness</Link></NavDropdown.Item> <br/>
           <NavDropdown.Item><Link to="/surgery">Book Top Quality Surgeries</Link></NavDropdown.Item> <br/>
           <NavDropdown.Item><Link to="/hospital">Search for hospitals</Link></NavDropdown.Item> <br/>
           <NavDropdown.Item><Link to="/Registerdoctor">Manage doctor profile</Link></NavDropdown.Item> <br/>
@@ -186,7 +185,7 @@ function NavBar (props) {
         </NavDropdown>
         
       </Nav>
-      <div className="text-end d-grid gap-3 d-md-flex justify-content-md-end"> 
+      <div className="text-end d-grid gap-2 d-md-flex justify-content-md-end"> 
 
           {!user ? (
 
@@ -214,9 +213,7 @@ function NavBar (props) {
                   <Dropdown.Item>
                     <Button onClick={() => {navigate(`/UserDashboard/${user.uid}`)}} variant='primary btn-sm'><small>Appointment</small></Button>
                   </Dropdown.Item>
-                  <Dropdown.Item>
-                    <Button onClick={() => {navigate(`/UserDashboard/${user.uid}`)}} variant='primary btn-sm'><small>Health Record</small></Button>
-                  </Dropdown.Item>
+                 
                   <Dropdown.Item>
                     <Button variant='danger btn-sm' onClick={handleLogOut}><small>LOG OUT</small></Button>
                   </Dropdown.Item>
@@ -230,9 +227,9 @@ function NavBar (props) {
 
           </div>
     </Navbar.Collapse>
-  </Container>
-</Navbar>
-
+    </Container>
+    </Navbar>
+    </div>
     
     {/* <nav className="navbar navbar-expand-lg navbar-light bg-light">
       
@@ -336,7 +333,7 @@ function NavBar (props) {
   
  
 
-  </>
+  </div>
 
   
  

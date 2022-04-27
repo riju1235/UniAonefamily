@@ -7,7 +7,7 @@ function Terms (props) {
 
         <>
         <Navbar/>
-       
+        <br/><br/><br/>
  <div className="album py-5">
         
         <div className="container">

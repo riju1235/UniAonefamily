@@ -36,7 +36,7 @@ function Hospital () {
         
 <div>
   <Navbar/>
-
+  <br/><br/><br/>
 <div className="album py-3">
         
         <div className="container">
@@ -112,7 +112,7 @@ function Hospital () {
 <p className="card-text"> {hospital.locationh} </p>
                             
 <div className="btn-group">
-<a href="tel:{hospital.CallNow}"  className="btn btn- btn-outline-info">Call Now</a>
+<a href="tel: +91 9933798896"  className="btn btn- btn-outline-info">Call Now</a>
                                         <button type="button" className="btn btn-sm btn-outline-primary">
                                         {hospital.CallNow}
                                         </button>

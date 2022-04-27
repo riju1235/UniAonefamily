@@ -19,7 +19,7 @@ const AddCorporate = () => {
        e.preventDefault();
        setMassage("");
        if(title === "" || phone === "" || email === "" || organization === "" || employee === "") {
-           setMassage({error: true, msg : "All field are mandator"});
+           setMassage({error: true, msg : "All fields are mandatory!"});
            return;
        }
        const newBook = {
@@ -34,7 +34,7 @@ const AddCorporate = () => {
 
        try {
            await BookDataCorporate.addBooks(newBook);
-           setMassage({ error: false, msg : "New Book Appointment added successfully!"});
+           setMassage({ error: false, msg : "Our expert team will call you within 2 hours!"});
        } catch (err) {
            setMassage({ error: true, msg: err.massage });
        }

@@ -6,6 +6,7 @@ function Developers (props) {
     return (
             <>
             <Navbar/>
+            <br/><br/><br/>
             <img src={Web}  class="img-fluid" width="1349" height="400"  alt="Web"></img>
             <div className="p-3 mb-2 bg-light text-dark">
                 <br/><br/>

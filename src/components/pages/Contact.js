@@ -12,10 +12,11 @@ function Contact (props) {
     return(
         <>
 
-<div className="logoconta">
+<center className="logoconta">
 <Link to="/">
   <img src={Logo} className="img-fluid" width="200" height="80"  alt="Logos"/>
-  </Link></div>
+  </Link></center>
+  <br/>
 <nav>
   <div class="nav nav-tabs " id="nav-tab" role="tablist">
     <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Contact</button>

@@ -19,7 +19,7 @@ const AddBook = () => {
        e.preventDefault();
        setMassage("");
        if(title === "" || contact === "" || location === "") {
-           setMassage({error: true, msg : "All field are mandator"});
+           setMassage({error: true, msg : "All fields are mandatory!"});
            return;
        }
        const newBook = {

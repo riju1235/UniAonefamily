@@ -16,7 +16,7 @@ const Surgery = (props) => {
 
       <Navbar/>
 
-
+      <br/><br/><br/>
          <img src={ Surgerycare} class="img-fluid" width="1349" height="600"  alt=" Surgerycare"></img>
          <br/><br/>
    

@@ -12,7 +12,7 @@ function Corporate(props) {
         
         <>      
       <Navbar/>
-   
+      <br/><br/><br/>
            <img src={Corporate1}  class="img-fluid"  width="1349" height="700" alt="Corporate"/>
            <AddCorporate/>
 

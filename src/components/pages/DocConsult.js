@@ -112,8 +112,8 @@ function DocConsult() {
     const [selectedDate, setSelectedDate] = useState(null)
     const [selectedTime ,setSelectedTime] = useState(null)
     const userinfoRef = collection(db, "Appointments") 
-    const minTime: Date = new Date("10/03/2021 10:00 AM")
-    const maxTime: Date = new Date("10/03/2021 05:00 PM")
+    const minTime: Date = new Date("10/03/2021 08:00 AM")
+    const maxTime: Date = new Date("10/03/2021 09:00 PM")
     const [patientName, setPatientName] = useState(null)
     const [patientCall, setPatientCall] = useState(null)
 
@@ -157,14 +157,27 @@ function DocConsult() {
     return (
     <>
    <Navbar/>
-<br/><br/><br/><br/>
-        <div className='doc-div' style={{ display: "flex", justifyContent: "space-between"}}>
+<br/><br/><br/>
+       <div className='container-sm' >
 
-            <div className='DocConsultant' style={{ display: "block",margin:50 }}>
-                <Image style={{ display: "block", width: 350, height: 250 }} src={doctor && doctor.docImg} rounded/>
-                <h2>{doctor && doctor.fName} {doctor && doctor.lName}</h2>
-                <h6>{doctor && doctor.specialization}</h6>  
-                <h6>{doctor && doctor.experiance} years of experience</h6>    
+            <div className='DocConsultant' style={{ margin: 0 }}>
+        {/* <div className='doc-div' style={{ display: "flex", justifyContent: "space-between"}}>
+
+            <div className='DocConsultant' style={{ display: "block",margin:50 }}> */}
+    <div className="album py-3">
+        
+        <div className="container">
+
+            <div className="row">
+            <div className="col-md-4">
+                        <div className="card mb-4 box shadow">
+                        <img className="card-img-top"  src={doctor && doctor.docImg} alt="doc1" />
+                        <div className="card-body">
+                {/* <Image style={{ display: "block", width: 350, height: 250 }} src={doctor && doctor.docImg} rounded/> */}
+                <h2 className="card-text">{doctor && doctor.fName} {doctor && doctor.lName}</h2>
+                <h6 className="card-text">{doctor && doctor.specialization}</h6>  
+                <h6 className="card-text">{doctor && doctor.experiance} years of experience</h6>    
+
                 <div class="btn-group">
                                 <div class="dropdown">
   <button class="btn btn-sm btn-info dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
@@ -172,10 +185,10 @@ function DocConsult() {
   </button>
 
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-    <li><button class="dropdown-item" ><center>Today {doctor && doctor.slots}</center></button></li>
-    <li><button class="dropdown-item btn btn-primary"> <center> {doctor && doctor.todaytime}</center></button></li>
-    <li><button class="dropdown-item"><center>Tomorrow {doctor && doctor.tomorrowslot}</center></button></li>
-    <li><button class="dropdown-item"><center>{doctor && doctor.tomorrowtime}</center></button></li>
+    <li><button class="dropdown-item" ><small><center>Today {doctor && doctor.slots}</center></small></button></li>
+    <li><button class="dropdown-item btn btn-primary"> <small><center> {doctor && doctor.todaytime}</center></small></button></li>
+    <li><button class="dropdown-item"><small><center>Tomorrow {doctor && doctor.tomorrowslot}</center></small></button></li>
+    <li><button class="dropdown-item"><small><center>{doctor && doctor.tomorrowtime}</center></small></button></li>
   </ul>
 </div>
 <div class="dropdown">
@@ -184,15 +197,22 @@ function DocConsult() {
   </a>
 
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-    <li><p class="dropdown-item">{doctor && doctor.ClinicName}</p></li>
-    <li><button class="dropdown-item">{doctor && doctor.ClinicLocation}</button></li>
-    <li> <a class="dropdown-item btn btn-btn-outline-info" href="tel: {doctor.ClinicCall}"> {doctor && doctor.ClinicCall}</a></li>
+    <li><p class="dropdown-item"><small>{doctor && doctor.ClinicName}</small></p></li>
+    <li><button class="dropdown-item"> <small>{doctor && doctor.ClinicLocation}</small></button></li>
+    <li> <a class="dropdown-item btn btn-btn-outline-info" href="tel: +91 9933798896"><small> {doctor && doctor.ClinicCall}</small></a></li>
   </ul>
 </div>
-</div>    
+</div>   
+</div>
+</div>
+</div>
+</div>
+</div>
+</div> 
             </div>
+            <div className="">
             {emailVerified ? (
-            <form onSubmit={bookappointment} className='consult' style={{ display: "block", margin:50 }}>
+            <form onSubmit={bookappointment} className='consult' style={{ margin: 20 }}>
               
                 <h2>Book An Appointment</h2>
               
@@ -234,14 +254,15 @@ function DocConsult() {
                 
             </form>
 
-            ):(<>
-             <h2 style={{ display: "block",margin:50 }}>You Need to Verify your Email to consult a Doctor</h2>
+            )
+            :(<>
+             <h2 style={{ display: "block",margin:50 }}>You Need to Verify your Email to appointment a Doctor</h2>
             </>
             )
             }
             
-
-        </div>
+      </div>
+      </div>
         
     </>
     )

@@ -29,10 +29,10 @@ function About (props) {
     return(
       <>
         <Navbar/>
-     
-      <ul class="nav nav-pills mb-3 bg-light shadow"  id="pills-tab" role="tablist">
+     <br/><br/><br/><br/>
+      <ul class="nav nav-pills mb-3"  id="pills-tab" role="tablist">
   <li class="nav-item" role="presentation">
-    <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">About uniAonefamily</button>
+    <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">About Uniaonefamily</button>
   </li>
   <li class="nav-item" role="presentation">
     <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Leadership</button>
@@ -102,7 +102,7 @@ function About (props) {
                     <br/>
                     <Link to="/labtest">
                     <button type="button" class="btn btn-outline-primary">#World Class Diagnostic Test  NABL & CAP CERTIFIED</button></Link><br/><br/>
-                    <Link to="/clinci">
+                    <Link to="/clinic">
                     <button type="button" class="btn btn-outline-primary">#India's Top Varified Clinic  5000+ Patient Outstabding Feedback</button></Link><br/><br/>
                     <Link to="/xray">
                     <button type="button" class="btn btn-outline-primary"> #India's Advance Scan Technology    Fast Scan & Xray Technology</button></Link><br/><br/>

@@ -60,7 +60,7 @@ function Login(props) {
     return (
       <>    
           <Navbar/>
-         
+         <br/><br/><br/>
     <form onSubmit={handleSubmit} className="loog">
     
  
@@ -109,11 +109,10 @@ function Login(props) {
 <div class="col-md-12 text-center">
       <button type="submit" class="btn btn-primary" style={{width:'150px'}}>{props.loginf} </button>
       </div>
-      {/* <div class="col-md-12 text-center"> */}
-      <div className="submited7">
+    
+      <center className='mt-4'>
       <GoogleButton onClick = { handleGoogleSignIn }  className='g-btn' type='dark'></GoogleButton>
-      {/* </div> */}
-      </div>
+       </center>
 </div>
 </div>
 </div>

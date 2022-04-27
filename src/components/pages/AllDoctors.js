@@ -38,11 +38,12 @@ function AllDoctors (props) {
   return (
     <div>     
           <Navbar/>
-             
+          <br/><br/><br/>
              <img src={FindDoctor}  class="img-fluid" width="1350" height="500" alt="..."></img>
              <br/>
              
   <br/>
+  
   <h1 style={{textAlign: "center", color: "purple"}}><b>#India's Most Trusted Doctors</b></h1>
   <div className="album py-2">
         
@@ -52,7 +53,7 @@ function AllDoctors (props) {
                 <div className="col-md-6">
                         
                         <div className="card-body">
-                        <input type="text" class="form-control" placeholder="Dr. Name, Speciality, year of experiance" name="location" 
+                        <input type="text" class="form-control" placeholder="Search Doctors, Speciality, year of experience" name="location" 
                         onChange ={(e) => {
                           setsearchTerm(e.target.value);
                         }}
@@ -64,7 +65,7 @@ function AllDoctors (props) {
 
                             </div>
                           
-                        
+                    
                         </div>
 
                       
@@ -106,41 +107,43 @@ function AllDoctors (props) {
   </button>
 
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-    <li><button class="dropdown-item" ><center>Today {doctor.slots}</center></button></li>
-    <li><button class="dropdown-item btn btn-primary"> <center> {doctor.todaytime}</center></button></li>
-    <li><button class="dropdown-item"><center>Tomorrow {doctor.tomorrowslot}</center></button></li>
-    <li><button class="dropdown-item"><center>{doctor.tomorrowtime}</center></button></li>
+    <li><button class="dropdown-item" ><small><center>Today {doctor.slots}</center></small></button></li>
+    <li><button class="dropdown-item btn btn-primary"> <small><center> {doctor.todaytime}</center></small></button></li>
+    <li><button class="dropdown-item"><small><center>Tomorrow {doctor.tomorrowslot}</center></small></button></li>
+    <li><button class="dropdown-item"><small><center>{doctor.tomorrowtime}</center></small></button></li>
   </ul>
 </div>
+
 <div class="dropdown">
   <a class="btn btn-sm btn-o dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
     Clinic
   </a>
 
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-    <li><p class="dropdown-item">{doctor.ClinicName}</p></li>
-    <li><button class="dropdown-item">{doctor.ClinicLocation}</button></li>
-    <li> <a class="dropdown-item btn btn-btn-outline-info" href="tel: {doctor.ClinicCall}"> {doctor.ClinicCall}</a></li>
+    <li><p class="dropdown-item"><small>{doctor.ClinicName}</small></p></li>
+    <li><button class="dropdown-item"><small>{doctor.ClinicLocation}</small></button></li>
+    <li> <a class="dropdown-item btn btn-btn-outline-info" href="tel: +91 9933798896"> <small>{doctor.ClinicCall}</small></a></li>
   </ul>
 </div>
 </div>
 <br/><br/>
+
                                 <div className="d-flex justify-content-between align-items-center">
                                     <div className="btn-group">
                                         
-                                        <div class="dropdown">
-  <button class="btn btn-sm btn-outline-primary dropdown-toggle" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <div className="dropdown  ">
+  <button className="btn btn-sm btn-outline-primary dropdown-toggle" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
   View Profile
   </button>
 
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-    <li><button class="dropdown-item" ><b>Medical Degrees:</b> {doctor.degree}</button></li>
-    <li><button class="dropdown-item" ><b>Registration No:</b> {doctor.registration}</button></li>
-    <li><button class="dropdown-item" ><b>Year of Registration:</b> {doctor.year} </button></li>
-    <li><button class="dropdown-item"><b>State of Registration:</b> {doctor.state}</button></li>
+  <ul className="dropdown-menu"  aria-labelledby="dropdownMenuLink" >
+    <li><button className="dropdown-item " ><small><b>Medical Degrees:</b><br/> {doctor.degree}</small></button></li>
+    <li><button className="dropdown-item " ><small><b>Registration No:</b> {doctor.registration}</small></button></li>
+    <li><button className="dropdown-item " ><small><b>Year of Registration:</b> {doctor.year}</small> </button></li>
+    <li><button className="dropdown-item "><small><b>State of Registration:</b> {doctor.state}</small></button></li>
   </ul>
 </div>
-                                        <button onClick={() => {navigate(`/DocConsult/${doctor.id}`)}} type="button" className="btn btn-sm btn-outline-success">
+                                  <button onClick={() => {navigate(`/DocConsult/${doctor.id}`)}} type="button" className="btn btn-sm btn-outline-success">
                                            Book Appointment
                                         </button>
                                     </div>

@@ -7,12 +7,15 @@ import Rape from '../images/stoprape.jpg';
 import Digital from '../images/digitalhealth.jpg';
 import Update from '../images/update1.jpg';
 import Education3 from '../images/educationvarsha.jpg';
+import {  Dropdown, NavDropdown  } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 
 function Social (props) {
     return (
             <>
             <Navbar/>
+            <br/><br/><br/>
             <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
@@ -172,7 +175,8 @@ in all countries can easily consult with the right doctor about their health
                 </div>
                 </div>
                 </div>
-             
+
+
                 <div className="album py-5">
         
         <div className="container">
@@ -187,7 +191,7 @@ in all countries can easily consult with the right doctor about their health
                             <p className="card-text"> OUR COMPANY MISSION</p>
                             <p className="card-text"> ''
 Advanced Keyboard, Excel, Word, PowerPoint Smart Shortcut Keys, Photoshop are taught.
- Advanced coding language is taught. (HTML, CSS, JS, .NET, NodeJS , ReactJS, Firebase''</p>
+ Advanced coding language is taught. </p>
                             <div className="d-flex justify-content-between align-items-center">
                            
                                </div>

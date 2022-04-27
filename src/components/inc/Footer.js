@@ -48,7 +48,7 @@ function Footer() {
            
             <Link to="/Labtest">
             <li className="mb-2"  class="link-light"><small>Book Diagnostic Test</small></li></Link>
-            <Link to="/checkup">
+            <Link to="/labtest">
             <li className="mb-2"  class="link-light"><small>Book full Body Checkups</small></li></Link>
             
           </ul>
@@ -96,8 +96,11 @@ function Footer() {
                  <h6>Usuful Link</h6>
                    <hr/>
                      <ul className="list-unstyled">
-                       <Link to="">
-            <li className="mb-2" class="link-light">Help</li>
+                       <Link to="/login">
+            <li className="mb-2" class="link-light"><small>Login</small></li>
+            </Link>
+            <Link to="/signup">
+            <li className="mb-2" class="link-light"><small>Signin</small></li>
             </Link>
             <Link to="/Corporate">
             <li className="mb-2" class="link-light"><small>Corporate Wellness</small></li></Link>
@@ -106,7 +109,7 @@ function Footer() {
             <Link to="/developers">
             <li className="mb-2" class="link-light"><small>Devolopers</small></li>
             </Link>
-            <li className="mb-2" class="link-light"><small>Quick Update</small></li><br/>
+           <br/>
             <h6>Legal</h6>
             <hr/>
             <Link to="/terms">

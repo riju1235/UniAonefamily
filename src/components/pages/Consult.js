@@ -61,7 +61,7 @@ const {
      
     <div className="special">
       <Navbar/>
-    
+      <br/><br/><br/>
       
            
            <img src={Consultation} class="img-fluid"   width="1349" height="500" alt="..."></img>
@@ -94,7 +94,7 @@ const {
                 <div className="col-md-6">
                         
                         <div className="card-body">
-                        <input type="text" class="form-control" placeholder="Ex. Fever, Sexual" name="location" 
+                        <input type="text" class="form-control" placeholder="Ex. Fever, Sexology" name="location" 
                         onChange ={(e) => {
                           setsearchTerm(e.target.value);
                         }}

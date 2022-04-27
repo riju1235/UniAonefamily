@@ -46,7 +46,7 @@ function RegisterDoc(props) {
     <div>
         <Navbar/>
       
-            
+        <br/><br/><br/>
         <img src={DoctorP} class="img-fluid"  width="1900" height="400" alt="DoctorP"></img>
         <AddDoctor/>
         <br/>
