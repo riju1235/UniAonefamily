@@ -28,7 +28,7 @@ function Career (props) {
 
         <>
         <Navbar/>
-        <br/><br/><br/>
+        
           <img  src={Career1} class="img-fluid"  width="1349" height="600" alt="Health1"></img>
           <br/><br/><br/>
           <div className="careercolornwe">

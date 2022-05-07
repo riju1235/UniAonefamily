@@ -452,7 +452,7 @@ useEffect(() => {
 return (
 <div >
   <Navbar/>
-  <br/><br/><br/>
+
   <img src={Labtest}  class="img-fluid"   width="1349" height="500" alt="..."></img>
   {/* <img src={Labtest} width="1349" height="500"  alt="LabTest"/> */}
   <br></br>

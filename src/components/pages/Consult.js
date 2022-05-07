@@ -61,7 +61,6 @@ const {
      
     <div className="special">
       <Navbar/>
-      <br/><br/><br/>
       
            
            <img src={Consultation} class="img-fluid"   width="1349" height="500" alt="..."></img>

@@ -6,7 +6,7 @@ function Post(props) {
     return(
         
         <div>
-            <br/><br/><br/>
+         
            <img src={Tooth2}  width="1349" height="500" alt="Tooth2"/>
           
            

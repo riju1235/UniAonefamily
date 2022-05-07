@@ -22,7 +22,7 @@ function Finddoctor (props) {
 
         <div>
           <Navbar/>
-            <br/><br/><br/>
+        
             <div className="findd">
       
       <img src={FindDoctor}  class="img-fluid" width="1350" height="500" alt="..."></img>

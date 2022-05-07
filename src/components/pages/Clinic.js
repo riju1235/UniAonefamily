@@ -24,7 +24,7 @@ function Clinic (props) {
     return(
         <>
         <Navbar/>
-        <br/><br/><br/>
+       
 <div className="album py-2">
         
         <div className="container">

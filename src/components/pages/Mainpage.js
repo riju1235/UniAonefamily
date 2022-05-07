@@ -27,7 +27,7 @@ function Mainpage (props) {
             <div>
               
              <Navbar/>
-          <br/><br/><br/>
+  
                <Slider />
                <br/>
                <div className="india">

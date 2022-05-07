@@ -41,9 +41,10 @@ useEffect(() => {
 
     return (
     
-        
-        <div className="mains container-fluid">
-<div class="fixed-top ">
+        <>
+
+         {/* <div className="mains container-fluid"> */}
+
 <Navbar bg="light shadow" expand="lg" >
   <Container fluid>
     <Navbar.Brand> <Link to="/"> <img src={Logo} className="img-fluid"  width="150" height="40" alt="Logos"/></Link></Navbar.Brand>
@@ -76,15 +77,12 @@ useEffect(() => {
     </Navbar.Collapse>
   </Container>
 </Navbar>
-</div>
+
 
               
       
 
 
-<br/>
-<br/>
-<br/>
 <br/>
 
             <h4 style={{textAlign: "center"}}> India's Largest Helath Article Tips </h4>
@@ -138,11 +136,11 @@ useEffect(() => {
                             </div>
                             </div>
                             </div>
-            </div>
+             {/* </div> */}
        
       
      
-    
+    </>
         
 
         );

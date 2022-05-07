@@ -322,6 +322,7 @@ function UserDashboard(props) {
 			handler: function (response) {
 				alert(response.razorpay_payment_id)
         alert("Payment Succesfull")
+        console.log(response.razorpay_payment_id)
         if(response.razorpay_payment_id){
           cart.map ((i)=>{
             const usertestinfo = {
@@ -332,21 +333,22 @@ function UserDashboard(props) {
             }
             addDoc(userLabtestBookingRef, usertestinfo)
           })
+          console.log(response.razorpay_payment_id)
+      if(response.razorpay_payment_id){
+        cart.map ((k)=>{
+          const userconinfo = {
+            "email": user.email,
+            "detail": k.detail,
+            
+            "price": k.price
+          }
+          addDoc(userConsultBookingRef, userconinfo)
+        })
+      
         
       }
-
-    //   if(response.razorpay_payment_id){
-    //     cart.map ((k)=>{
-    //       const userconinfo = {
-    //         "email": user.email,
-    //         "detail": k.detail,
-            
-    //         "price": k.price
-    //       }
-    //       addDoc(userConsultBookingRef, userconinfo)
-    //     })
       
-    // }
+    }
 
 	
 			},
@@ -378,7 +380,7 @@ function UserDashboard(props) {
     <>
 
 <Navbar/>
-<br/><br/><br/><br/>
+<br/>
 <ul class="nav nav-pills mb-3 text-ligh shadow  " id="pills-tab" role="tablist">
   <li class="nav-item" role="presentation">
     <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Dashborad</button>

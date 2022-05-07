@@ -60,7 +60,7 @@ function Login(props) {
     return (
       <>    
           <Navbar/>
-         <br/><br/><br/>
+         
     <form onSubmit={handleSubmit} className="loog">
     
  

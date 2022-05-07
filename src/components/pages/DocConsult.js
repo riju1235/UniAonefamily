@@ -157,7 +157,6 @@ function DocConsult() {
     return (
     <>
    <Navbar/>
-<br/><br/><br/>
        <div className='container-sm' >
 
             <div className='DocConsultant' style={{ margin: 0 }}>
@@ -177,6 +176,7 @@ function DocConsult() {
                 <h2 className="card-text">{doctor && doctor.fName} {doctor && doctor.lName}</h2>
                 <h6 className="card-text">{doctor && doctor.specialization}</h6>  
                 <h6 className="card-text">{doctor && doctor.experiance} years of experience</h6>    
+                <p className="card-text"> ₹ {doctor && doctor.consultfee} </p>
 
                 <div class="btn-group">
                                 <div class="dropdown">
@@ -187,8 +187,11 @@ function DocConsult() {
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
     <li><button class="dropdown-item" ><small><center>Today {doctor && doctor.slots}</center></small></button></li>
     <li><button class="dropdown-item btn btn-primary"> <small><center> {doctor && doctor.todaytime}</center></small></button></li>
+    <li><button class="dropdown-item btn btn-primary"> <small><center> {doctor && doctor.todayafternoon}</center></small></button></li>
+    <li><button class="dropdown-item btn btn-primary"> <small><center> {doctor && doctor.todayevening}</center></small></button></li>
     <li><button class="dropdown-item"><small><center>Tomorrow {doctor && doctor.tomorrowslot}</center></small></button></li>
     <li><button class="dropdown-item"><small><center>{doctor && doctor.tomorrowtime}</center></small></button></li>
+    <li><button class="dropdown-item"><small><center>{doctor && doctor.tomorrowafternoon}</center></small></button></li>
   </ul>
 </div>
 <div class="dropdown">

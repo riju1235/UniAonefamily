@@ -36,7 +36,7 @@ function Hospital () {
         
 <div>
   <Navbar/>
-  <br/><br/><br/>
+ 
 <div className="album py-3">
         
         <div className="container">

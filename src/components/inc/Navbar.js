@@ -150,10 +150,10 @@ function NavBar (props) {
 
 
   return (
-    
-<div className="mains container-fluid">
-   <div class="fixed-top shadow">
-     <Navbar bg="light"  expand="lg">
+    <>
+{/* <div className="mains container-fluid"> */}
+   
+     <Navbar bg="light shadow"  expand="lg">
           <Container fluid>
          <Navbar.Brand>
         <Link to="/">
@@ -171,7 +171,7 @@ function NavBar (props) {
         <Nav.Link> <Link to="/Labtest"><b>Lab Test</b><br></br><small>Book Test & checkup</small></Link></Nav.Link>
         <Nav.Link><Link to="/xray"><b>Scan & Xray</b><br/><small>Book scan & xray</small></Link></Nav.Link>
         <Nav.Link><Link to="/clinic"><b>Clinic</b><br/><small>India's Varified Clinic</small></Link></Nav.Link>
-        <Nav.Link><Link to="/hospital"><b>Hospital</b><br/><small>Search Best Hospital</small></Link></Nav.Link>
+        <Nav.Link><Link to="/hospital"><b>Hospital</b><br/><small>Search Top Hospital</small></Link></Nav.Link>
         <NavDropdown title="For Providers" id="navbarScrollingDropdown">
           <NavDropdown.Item ><Link to="/corporate" > Corporate Wellness</Link></NavDropdown.Item> <br/>
           <NavDropdown.Item><Link to="/surgery">Book Top Quality Surgeries</Link></NavDropdown.Item> <br/>
@@ -229,7 +229,7 @@ function NavBar (props) {
     </Navbar.Collapse>
     </Container>
     </Navbar>
-    </div>
+    
     
     {/* <nav className="navbar navbar-expand-lg navbar-light bg-light">
       
@@ -333,9 +333,9 @@ function NavBar (props) {
   
  
 
-  </div>
+  {/* </div> */}
 
-  
+</>
  
   );
 }

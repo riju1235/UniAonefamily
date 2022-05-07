@@ -9,7 +9,7 @@ function Xray (props) {
         <div className="cotnm">
             
           <Navbar/>     
-          <br/><br/><br/>
+       
 <img src={Scans} class="img-fluid"  width="1349" height="600" alt="Scans"></img>
 
 

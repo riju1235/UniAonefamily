@@ -15,7 +15,7 @@ function Social (props) {
     return (
             <>
             <Navbar/>
-            <br/><br/><br/>
+           
             <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
@@ -189,9 +189,8 @@ in all countries can easily consult with the right doctor about their health
                     
                     <h4 className="card-text">Latest & Advance Technology Education</h4>
                             <p className="card-text"> OUR COMPANY MISSION</p>
-                            <p className="card-text"> ''
-Advanced Keyboard, Excel, Word, PowerPoint Smart Shortcut Keys, Photoshop are taught.
- Advanced coding language is taught. </p>
+                            <p className="card-text"> ''Advanced Keyboard, Excel, Word, PowerPoint Smart Shortcut Keys, Photoshop are taught.
+ Advanced coding language is taught.'' </p>
                             <div className="d-flex justify-content-between align-items-center">
                            
                                </div>

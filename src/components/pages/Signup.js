@@ -55,7 +55,7 @@ function Signup(props) {
 return (
 <div>
   <Navbar/>
-  <br/><br/><br/>
+  
 <div className="album py-4">
            <div className="container">
 

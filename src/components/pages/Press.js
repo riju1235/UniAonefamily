@@ -6,8 +6,6 @@ function Xray (props) {
     return (
             <>
             <Navbar/>
-           
-            <br/><br/><br/>
             <div className="p-3 mb-2 bg-light text-dark">
                 <br/><br/>
                 <h2 style={{textAlign: "center"}}>Media Contact</h2>

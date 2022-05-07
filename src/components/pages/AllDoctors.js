@@ -38,7 +38,7 @@ function AllDoctors (props) {
   return (
     <div>     
           <Navbar/>
-          <br/><br/><br/>
+         
              <img src={FindDoctor}  class="img-fluid" width="1350" height="500" alt="..."></img>
              <br/>
              
@@ -100,24 +100,29 @@ function AllDoctors (props) {
                                 <h3 className="card-text">Dr. {doctor.fName} {doctor.lName}</h3>
                                 <h6 className="card-text"> {doctor.specialization}</h6>
                                 <h6 className="card-text" style={{color: "blue"}}> {doctor.experiance} years of experience</h6>
+                                <p className="card-text"> ₹{doctor.consultfee} </p>
                                 <div class="btn-group">
                                 <div class="dropdown">
-  <button class="btn btn-sm btn-info dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+  <button class="btn btn-sm btn-info dropdown-toggle"  role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
     Time Slot
   </button>
 
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
     <li><button class="dropdown-item" ><small><center>Today {doctor.slots}</center></small></button></li>
     <li><button class="dropdown-item btn btn-primary"> <small><center> {doctor.todaytime}</center></small></button></li>
+    <li><button class="dropdown-item btn btn-primary"> <small><center> {doctor.todayafternoon}</center></small></button></li>
+    <li><button class="dropdown-item btn btn-primary"> <small><center> {doctor.todayevening}</center></small></button></li>
     <li><button class="dropdown-item"><small><center>Tomorrow {doctor.tomorrowslot}</center></small></button></li>
     <li><button class="dropdown-item"><small><center>{doctor.tomorrowtime}</center></small></button></li>
+    <li><button class="dropdown-item"><small><center>{doctor.tomorrowafternoon}</center></small></button></li>
+    <li><button class="dropdown-item"><small><center>{doctor.tomorrowevening}</center></small></button></li>
   </ul>
 </div>
 
 <div class="dropdown">
-  <a class="btn btn-sm btn-o dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+  <button class="btn btn-sm btn-o dropdown-toggle"  role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
     Clinic
-  </a>
+  </button>
 
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
     <li><p class="dropdown-item"><small>{doctor.ClinicName}</small></p></li>
