@@ -525,6 +525,7 @@ return (
             <h5 className="card-text">{labtest.name}</h5>
               <p className="card-text">{labtest.detail}</p>
               <h6 className="card-text" >₹{labtest.price}</h6>
+              <h6 className="card-text" >₹{labtest.type}</h6>
               <div className="d-flex justify-content-between align-items-center">
               {cart.some((p) => p.id === labtest.id) ? (
              

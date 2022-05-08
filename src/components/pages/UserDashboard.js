@@ -122,9 +122,9 @@ function UserDashboard(props) {
   const [userinfo, setUserInfo] = useState([]);
   const [appointmentinfo, setAppointmentInfo] = useState([]);
   const [labtestbookinfo, setLabtestbookinfo] = useState([]);
-  const userLabtestBookingRef = collection(db, "LabtestBookings")
+  const userBookingRef = collection(db, "AllBookings")
   const [consultbookinfo, setConsultbookinfo] = useState([]);
-  const userConsultBookingRef = collection(db, "ConsultBookings")
+  
 
   const [userss, setUser]=useState([])
   
@@ -152,7 +152,7 @@ function UserDashboard(props) {
   userinfo.map ((url) =>{
     p= url.records
   })
-  console.log(p)
+  
 
   const imageListRef = ref (storage, "images/")
   const uploadImage =() => {
@@ -222,8 +222,8 @@ function UserDashboard(props) {
   },[])
 
   useEffect(() => {
-    const ref =collection(db,"LabtestBookings");
-    const b = query(ref, where("email", "==", user.email));
+    const ref =collection(db,"AllBookings");
+    const b = query(ref, where("email", "==", user.email), where("type", "==", "labtest"));
     onSnapshot(b,(snapshot) => {
       let labtestbooking=[]
       snapshot.docs.forEach((doc)=>{
@@ -235,8 +235,8 @@ function UserDashboard(props) {
   },[])
 
   useEffect(() => {
-    const ref =collection(db,"ConsultBookings");
-    const g = query(ref, where("email", "==", user.email));
+    const ref =collection(db,"AllBookings");
+    const g = query(ref, where("email", "==", user.email), where("type", "==", "consult"));
     onSnapshot(g,(snapshot) => {
       let consultbooking=[]
       snapshot.docs.forEach((doc)=>{
@@ -312,7 +312,7 @@ function UserDashboard(props) {
 		}
 
     const options = {
-			// key: 'rzp_test_m1pxa5JKJbAV4p',
+			//key: 'rzp_test_m1pxa5JKJbAV4p',
       key: 'rzp_live_dsnDbV7kqj8n52',
 			currency: 'INR',
 			amount: total*100,
@@ -322,33 +322,21 @@ function UserDashboard(props) {
 			handler: function (response) {
 				alert(response.razorpay_payment_id)
         alert("Payment Succesfull")
-        console.log(response.razorpay_payment_id)
+
         if(response.razorpay_payment_id){
           cart.map ((i)=>{
             const usertestinfo = {
               "email": user.email,
               "detail": i.detail,
               "name": i.name,
-              "price": i.price
+              "price": i.price,
+              "type": i.type
             }
-            addDoc(userLabtestBookingRef, usertestinfo)
-          })
-          console.log(response.razorpay_payment_id)
-      if(response.razorpay_payment_id){
-        cart.map ((k)=>{
-          const userconinfo = {
-            "email": user.email,
-            "detail": k.detail,
             
-            "price": k.price
-          }
-          addDoc(userConsultBookingRef, userconinfo)
-        })
-      
-        
-      }
-      
-    }
+            addDoc(userBookingRef, usertestinfo)
+          })
+          
+        }
 
 	
 			},
@@ -439,6 +427,7 @@ function UserDashboard(props) {
                                   <h5 className="card-text">{labtest.name}</h5>
                                   <p className="card-text">{labtest.detail}</p>
                                   <h6 className="card-text">₹{labtest.price}</h6>
+                                  <h6 className="card-text">{labtest.type}</h6>
                                   <div className="d-flex justify-content-between align-items-center">
                                
                                   <button onClick={ () =>
@@ -513,6 +502,7 @@ function UserDashboard(props) {
                           <h5 className="card-text">{labinfo.name}</h5>
                           <p className="card-text">{labinfo.detail}</p>
                           <h6 className="card-text">₹{labinfo.price}</h6>
+                          <h6 className="card-text">₹{labinfo.type}</h6>
                           <div className="d-flex justify-content-between align-items-center">
                             </div>
                         </div>
@@ -525,7 +515,7 @@ function UserDashboard(props) {
                 </div>
 
 
-                {/* <h2 style={{margin:30}}>Yours ConsultBookings :- </h2>
+                <h2 style={{margin:30}}>Yours ConsultBookings :- </h2>
               <div className="row" style={{margin:5}}>
                {consultbookinfo.map((consainfo) => { 
                 
@@ -543,7 +533,7 @@ function UserDashboard(props) {
                     </div>
                   </div>
                 )})}
-                </div> */}
+                </div>
                 
 
 
@@ -610,94 +600,37 @@ function UserDashboard(props) {
   
   
 
-{/*   
-  {/* <h4 style={{margin:30, color: "purple"}}>Your Orders</h4>
-              
-              {cart.length > 0 ?(
-                <> 
-                 {emailVerified ?(
-                  <div className="album py-3">
-          
-                  <div className="container">
-      
-                      <div className="row">
-                      {cart.map((consult) => { return (
-                          <div className="col-md-3" key={consult.id}>
-                            <div className="card mb-4 border-dark box-shadow">
-                            <img className="card-img-top" src={consult.conImg} alt="doc1" />
-                                <div className="card-body">
-                                  <h5 className="card-text">{consult.name}</h5>
-                                  <p className="card-text">{consult.detail}</p>
-                                  <h6 className="card-text">₹{consult.price}</h6>
-                                  <div className="d-flex justify-content-between align-items-center">
-                               
-                                  <button onClick={ () =>
-                                    dispatch({
-                                      type: "REMOVE_FROM_CART",
-                                      payload: consult,
-                                    })} className='btn btn-danger'>Remove</button>
-                         
-                                </div>
-                           </div>
-                           </div>
-                         
-                           </div>
-                           
-                         
-                   
-                        )})}
-                        
-                
-                       
-                        </div>
-                        
-                      </div>
-  
-                    
-                   
-                      <div className='checkout' style={{margin:10}}>
-                        <span style={{ fontWeight: 700, fontSize: 20 }}>Total: ₹ {total}</span>
-                        <Button  onClick={displayRazorpay} style={{margin:30}} type="button" disabled={cart.length === 0}>
-                          Proceed to Checkout
-                        </Button>
-                      </div>
-                  </div>
-                  ):(
-                    <h3 style={{ display: "block",margin:50 }}>You Need to Verify your Email to see Your Orders</h3>
-                  )
-                }
-                
-                </>
-  
-  
-  
-              ):(
-                <h3 style={{margin:30}}>Cart is Empty!!!</h3>
-              )} */}
-            {/* </div> */}
-            {/* {user.emailVerified ?(
+    
+    <h2 style={{margin: 50}}>Yours Consults Bookings :- </h2>
+    <div className="album py-3"> 
+      <div className="container">
+        <div className="row" style={{margin:5}}>
+            {consultbookinfo.map((consainfo) => { 
             
-              <div className='right'>
-                <h3 style={{margin:30}}>Yours Appointments</h3>
-                {appointmentinfo.map((ainfo) => { return (
-                  <div key={appointmentinfo.id} style={{margin:30}}>
+            return (
+              <div className="col-6" key={consainfo.id}>
+                <div className="card mb-2 border-dark box shadow">
+                  
+                    <div className="card-body">
                     
-                    <h3 style={{margin:30}}>You Have Appointment With Dr. {ainfo.Appointment_with}</h3>
-                    <h3 style={{margin:30}}>At : {ainfo.Time} </h3>
-                    <h3 style={{margin:30}}>Date: {ainfo.Date}</h3>
-                  </div>
-                )})}
+                      <h5 className="card-text">{consainfo.detail}</h5>
+                      <h6 >₹{consainfo.price}</h6>
+                      <h6 >{consainfo.type}</h6>
+          
+                    </div>
+                  
+                </div>
+              </div>
+            )})}
+          </div>
+      </div>
+    </div>
               
-                
-              </div>
-              ):(
-                <div className='right'>
-                <h2 style={{ display: "block",margin:50 }}>You Need to Verify your Email to see the Appointments</h2>
-  
-              </div>
-              )
-            // } */} 
+              
+
   </div>
+
+
   <div class="tab-pane fade" id="pills-myappointment" role="tabpanel" aria-labelledby="pills-myappointment-tab"> 
   <h2 style={{margin: 50}}>Yours LabtestBookings :- </h2>
              
@@ -714,6 +647,7 @@ function UserDashboard(props) {
                                <h5 className="card-text">{labinfo.name}</h5>
                                <p className="card-text">{labinfo.detail}</p>
                                <h6 className="card-text">₹{labinfo.price}</h6>
+                               <h6 className="card-text">{labinfo.type}</h6>
                                <div className="d-flex justify-content-between align-items-center">
                                  </div>
                              </div>
